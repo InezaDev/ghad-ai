@@ -1,0 +1,10 @@
+{
+  "name": "ghad-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "GHAD AI — AI-powered educational platform for Rwandan teachers",
+  "engines": {
+    "node": ">=18"
+  }
+}
