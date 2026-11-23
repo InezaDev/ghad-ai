@@ -408,5 +408,38 @@ function init() {
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", init);
 } else {
-  init();
+  init(document.addEventListener("click", (e) => {
+  const launchEl = e.target.closest("[data-launch]");
+  if (launchEl) {
+    e.preventDefault();
+    openWorkspace(launchEl.dataset.launch || "dashboard");
+    return;
+  }
+
+  if (e.target.closest("#backToHomeBtn")) {
+    e.preventDefault();
+    showLandingPage();
+    return;
+  }
+
+  const viewEl = e.target.closest(".nav-btn[data-view], .feature-card[data-view]");
+  if (viewEl) {
+    e.preventDefault();
+    switchView(viewEl.dataset.view);
+    return;
+  }
+
+  const sidebar = $("#sidebar");
+  const toggle = $("#menuToggle");
+  if (
+    sidebar &&
+    toggle &&
+    window.innerWidth <= 860 &&
+    sidebar.classList.contains("open") &&
+    !sidebar.contains(e.target) &&
+    !toggle.contains(e.target)
+  ) {
+    closeSidebar();
+  }
+}););
 }
