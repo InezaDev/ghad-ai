@@ -117,14 +117,18 @@ function applyTheme() {
 }
 
 function openWorkspace(viewId = "dashboard") {
-  $("#landingPage").style.display = "none";
-  $("#workspaceApp").style.display = "flex";
+  const landing = $("#landingPage");
+  const workspace = $("#workspaceApp");
+  if (landing) landing.style.display = "none";
+  if (workspace) workspace.style.display = "flex";
   switchView(viewId);
 }
 
 function showLandingPage() {
-  $("#workspaceApp").style.display = "none";
-  $("#landingPage").style.display = "block";
+  const landing = $("#landingPage");
+  const workspace = $("#workspaceApp");
+  if (workspace) workspace.style.display = "none";
+  if (landing) landing.style.display = "block";
   closeSidebar();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -138,7 +142,10 @@ function switchView(viewId) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-function closeSidebar() { $("#sidebar").classList.remove("open"); }
+function closeSidebar() {
+  const sidebar = $("#sidebar");
+  if (sidebar) sidebar.classList.remove("open");
+}
 
 function init3DTilt() {
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -165,6 +172,7 @@ function init3DTilt() {
 
 function toast(message, type = "success") {
   const container = $("#toastContainer");
+  if (!container) return;
   const el = document.createElement("div");
   el.className = `toast ${type}`;
   el.textContent = message;
@@ -197,10 +205,16 @@ async function callAPI(endpoint, body) {
 
 async function generateLesson() {
   const btn = $("#generateLesson"), output = $("#lessonOutput"), body = $("#lessonBody");
+  if (!btn || !output || !body) return;
   const payload = {
-    subject: $("#lessonSubject").value, class: $("#lessonClass").value, topic: $("#lessonTopic").value.trim(),
-    duration: parseInt($("#lessonDuration").value, 10) || 40, unit: $("#lessonUnit").value.trim(),
-    learners: $("#lessonLearners").value.trim(), extra: $("#lessonExtra").value.trim(), language: LANG,
+    subject: $("#lessonSubject")?.value || "Mathematics",
+    class: $("#lessonClass")?.value || "P1",
+    topic: $("#lessonTopic")?.value.trim() || "",
+    duration: parseInt($("#lessonDuration")?.value, 10) || 40,
+    unit: $("#lessonUnit")?.value.trim() || "",
+    learners: $("#lessonLearners")?.value.trim() || "",
+    extra: $("#lessonExtra")?.value.trim() || "",
+    language: LANG,
   };
   if (!payload.topic) { toast("Please enter a lesson topic.", "error"); return; }
   btn.disabled = true; btn.innerHTML = `<span class="spinner"></span> ${t("generating")}`; output.style.display = "none";
@@ -213,7 +227,9 @@ async function generateLesson() {
 
 let chatHistory = [];
 async function sendChat() {
-  const input = $("#chatInput"), text = input.value.trim();
+  const input = $("#chatInput");
+  if (!input) return;
+  const text = input.value.trim();
   if (!text) return;
   input.value = "";
   addChatMsg(text, "user");
@@ -227,6 +243,7 @@ async function sendChat() {
 
 function addChatMsg(text, role) {
   const container = $("#chatMessages");
+  if (!container) return null;
   const div = document.createElement("div");
   div.className = `chat-msg ${role}`;
   div.innerHTML = `<div class="msg-avatar">${role === "ai" ? "G" : "You"}</div><div class="msg-bubble">${escapeHTML(text)}</div>`;
@@ -235,6 +252,7 @@ function addChatMsg(text, role) {
 
 function addTyping() {
   const container = $("#chatMessages");
+  if (!container) return null;
   const div = document.createElement("div");
   div.className = "chat-msg ai";
   div.innerHTML = `<div class="msg-avatar">G</div><div class="msg-bubble"><div class="typing-dots"><span></span><span></span><span></span></div></div>`;
@@ -242,13 +260,19 @@ function addTyping() {
 }
 
 function removeTyping(el) { if (el && el.parentNode) el.remove(); }
-function escapeHTML(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+function escapeHTML(s) { return String(s).replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">").replace(/"/g, """); }
 
 async function generateAssessment() {
   const btn = $("#generateAssessment"), output = $("#assessmentOutput"), body = $("#assessmentBody");
+  if (!btn || !output || !body) return;
   const payload = {
-    subject: $("#assessSubject").value, class: $("#assessClass").value, topic: $("#assessTopic").value.trim(),
-    count: parseInt($("#assessCount").value, 10), difficulty: $("#assessDifficulty").value, type: $("#assessType").value, language: LANG,
+    subject: $("#assessSubject")?.value || "Mathematics",
+    class: $("#assessClass")?.value || "P1",
+    topic: $("#assessTopic")?.value.trim() || "",
+    count: parseInt($("#assessCount")?.value, 10) || 10,
+    difficulty: $("#assessDifficulty")?.value || "medium",
+    type: $("#assessType")?.value || "mixed",
+    language: LANG,
   };
   if (!payload.topic) { toast("Please enter a topic.", "error"); return; }
   btn.disabled = true; btn.innerHTML = `<span class="spinner"></span> ${t("generating")}`; output.style.display = "none";
@@ -261,7 +285,13 @@ async function generateAssessment() {
 
 async function generateMethodology() {
   const btn = $("#generateMethodology"), output = $("#methodologyOutput"), body = $("#methodologyBody");
-  const payload = { subject: $("#methodSubject").value, class: $("#methodClass").value, topic: $("#methodTopic").value.trim(), language: LANG };
+  if (!btn || !output || !body) return;
+  const payload = {
+    subject: $("#methodSubject")?.value || "Mathematics",
+    class: $("#methodClass")?.value || "P1",
+    topic: $("#methodTopic")?.value.trim() || "",
+    language: LANG,
+  };
   if (!payload.topic) { toast("Please enter a topic.", "error"); return; }
   btn.disabled = true; btn.innerHTML = `<span class="spinner"></span> ${t("generating")}`; output.style.display = "none";
   try {
@@ -271,56 +301,103 @@ async function generateMethodology() {
   finally { btn.disabled = false; btn.textContent = t("generateMethodology"); }
 }
 
+function setVal(selector, value) {
+  const el = $(selector);
+  if (el) el.value = value;
+}
+
+function on(selector, event, handler) {
+  const el = $(selector);
+  if (el) el.addEventListener(event, handler);
+}
+
 function init() {
-  $("#langSelect").value = LANG;
-  $("#settingsLang").value = LANG;
-  $("#landingLangSelect").value = LANG;
-  $("#themeSelect").value = THEME;
-  $("#settingsTheme").value = THEME;
+  setVal("#langSelect", LANG);
+  setVal("#settingsLang", LANG);
+  setVal("#landingLangSelect", LANG);
+  setVal("#themeSelect", THEME);
+  setVal("#settingsTheme", THEME);
 
   const updateLang = (e) => {
     LANG = e.target.value;
     localStorage.setItem("ghad_lang", LANG);
-    $("#settingsLang").value = LANG;
-    $("#langSelect").value = LANG;
-    $("#landingLangSelect").value = LANG;
+    setVal("#settingsLang", LANG);
+    setVal("#langSelect", LANG);
+    setVal("#landingLangSelect", LANG);
     applyLanguage();
   };
-  $("#langSelect").addEventListener("change", updateLang);
-  $("#settingsLang").addEventListener("change", updateLang);
-  $("#landingLangSelect").addEventListener("change", updateLang);
+
+  on("#langSelect", "change", updateLang);
+  on("#settingsLang", "change", updateLang);
+  on("#landingLangSelect", "change", updateLang);
 
   const updateTheme = (e) => {
     THEME = e.target.value;
     localStorage.setItem("ghad_theme", THEME);
-    $("#settingsTheme").value = THEME;
-    $("#themeSelect").value = THEME;
+    setVal("#settingsTheme", THEME);
+    setVal("#themeSelect", THEME);
     applyTheme();
   };
-  $("#themeSelect").addEventListener("change", updateTheme);
-  $("#settingsTheme").addEventListener("change", updateTheme);
+
+  on("#themeSelect", "change", updateTheme);
+  on("#settingsTheme", "change", updateTheme);
 
   $$("[data-launch]").forEach((el) => {
     el.addEventListener("click", () => openWorkspace(el.dataset.launch));
   });
-  $("#backToHomeBtn").addEventListener("click", showLandingPage);
+  on("#backToHomeBtn", "click", showLandingPage);
 
-  $("#menuToggle").addEventListener("click", () => $("#sidebar").classList.toggle("open"));
-  $$(".nav-btn[data-view]").forEach((btn) => btn.addEventListener("click", () => switchView(btn.dataset.view)));
-  $$(".feature-card").forEach((card) => card.addEventListener("click", () => switchView(card.dataset.view)));
+  on("#menuToggle", "click", () => {
+    const sidebar = $("#sidebar");
+    if (sidebar) sidebar.classList.toggle("open");
+  });
 
-  $("#generateLesson").addEventListener("click", generateLesson);
-  $("#copyLesson").addEventListener("click", () => copyText($("#lessonBody").textContent));
-  $("#sendChat").addEventListener("click", sendChat);
-  $("#chatInput").addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendChat(); } });
-  $("#generateAssessment").addEventListener("click", generateAssessment);
-  $("#copyAssessment").addEventListener("click", () => copyText($("#assessmentBody").textContent));
-  $("#generateMethodology").addEventListener("click", generateMethodology);
-  $("#copyMethodology").addEventListener("click", () => copyText($("#methodologyBody").textContent));
+  $$(".nav-btn[data-view]").forEach((btn) =>
+    btn.addEventListener("click", () => switchView(btn.dataset.view))
+  );
+  $$(".feature-card").forEach((card) =>
+    card.addEventListener("click", () => switchView(card.dataset.view))
+  );
+
+  on("#generateLesson", "click", generateLesson);
+  on("#copyLesson", "click", () => {
+    const body = $("#lessonBody");
+    if (body) copyText(body.textContent);
+  });
+
+  on("#sendChat", "click", sendChat);
+  on("#chatInput", "keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      sendChat();
+    }
+  });
+
+  on("#generateAssessment", "click", generateAssessment);
+  on("#copyAssessment", "click", () => {
+    const body = $("#assessmentBody");
+    if (body) copyText(body.textContent);
+  });
+
+  on("#generateMethodology", "click", generateMethodology);
+  on("#copyMethodology", "click", () => {
+    const body = $("#methodologyBody");
+    if (body) copyText(body.textContent);
+  });
 
   document.addEventListener("click", (e) => {
-    const sidebar = $("#sidebar"), toggle = $("#menuToggle");
-    if (window.innerWidth <= 860 && sidebar.classList.contains("open") && !sidebar.contains(e.target) && !toggle.contains(e.target)) closeSidebar();
+    const sidebar = $("#sidebar");
+    const toggle = $("#menuToggle");
+    if (
+      sidebar &&
+      toggle &&
+      window.innerWidth <= 860 &&
+      sidebar.classList.contains("open") &&
+      !sidebar.contains(e.target) &&
+      !toggle.contains(e.target)
+    ) {
+      closeSidebar();
+    }
   });
 
   applyLanguage();
@@ -328,4 +405,8 @@ function init() {
   init3DTilt();
 }
 
-init();
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
+}
