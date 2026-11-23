@@ -1,563 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GHAD AI — 3D Lesson Planner & CBC Teaching Suite</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230b5d3b'/><text x='50' y='69' font-size='56' font-family='Arial,sans-serif' font-weight='700' fill='%23fad201' text-anchor='middle'>G</text></svg>" />
-  <link rel="stylesheet" href="/styles.css?v=20261123" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GHAD AI · REB Lesson Plan Generator for Rwanda Teachers</title>
+<meta name="description" content="AI-powered lesson plan generator for teachers in Rwanda. Make a Competence-Based Curriculum (REB format) lesson plan for any subject, edit it, save it and print it.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f7a4d'/%3E%3Cpath d='M32 14 50 22 32 30 14 22Z' fill='%23fff'/%3E%3Cpath d='M20 27v10c0 4 6 7 12 7s12-3 12-7V27l-12 5.4Z' fill='%23ffffffcc'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- LANDING / HOME PAGE -->
-  <div id="landingPage" class="landing-page">
-    <div class="ambient-orb orb-1" aria-hidden="true"></div>
-    <div class="ambient-orb orb-2" aria-hidden="true"></div>
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+<div class="stripe noprint"></div>
 
-    <header class="topbar">
-      <div class="container topbar-inner">
-        <a href="#top" class="brand" id="top">
-          <span class="brand-badge">G</span>
-          <span class="brand-text">
-            <strong>GHAD AI</strong>
-            <small data-i18n="brandTagline">Lesson Planner</small>
-          </span>
-        </a>
+<!-- ============ LANDING ============ -->
+<div id="landingPage">
+  <header class="top noprint">
+    <div class="in">
+      <b><span class="logo-badge">IG</span> GHAD AI</b>
+      <span data-i18n="brand_tag">Competence-Based Curriculum · REB format</span>
+      <select id="lang" aria-label="Language"><option value="en">English</option><option value="rw">Ikinyarwanda</option><option value="fr">Français</option></select>
+      <select id="theme" aria-label="Theme"><option value="auto">🌓 Auto</option><option value="light">☀️ Light</option><option value="dark">🌙 Dark</option></select>
+    </div>
+  </header>
 
-        <nav class="topnav" aria-label="Primary Navigation">
-          <a href="#features" data-i18n="navFeatures">Features</a>
-          <a href="#how-it-works" data-i18n="navHow">How It Works</a>
-          <a href="#curriculum" data-i18n="navCurriculum">REB CBC</a>
-        </nav>
-
-        <div class="topbar-actions">
-          <select id="landingLangSelect" class="select-compact" aria-label="Language">
-            <option value="en">EN</option>
-            <option value="rw">RW</option>
-            <option value="fr">FR</option>
-          </select>
-          <button type="button" class="btn btn-primary btn-sm" data-launch="dashboard" data-i18n="launchApp">
-            Open Workspace ->
-          </button>
-        </div>
+  <div class="wrap">
+    <div class="hero card3d" data-tilt>
+      <h1 data-i18n="hero_title">Plan your lesson in minutes</h1>
+      <p data-i18n="hero_sub">AI-powered, for every teacher in our school, all subjects, in the official REB lesson plan format.</p>
+      <div class="steps">
+        <div data-i18n="step1">1 · Fill in the lesson details</div>
+        <div data-i18n="step2">2 · Press Generate — the AI writes the plan</div>
+        <div data-i18n="step3">3 · Edit, save and print</div>
       </div>
-    </header>
-
-    <main>
-      <!-- HERO SECTION WITH 3D STAGE -->
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <div class="pill-tag">
-              <span class="dot"></span>
-              <span data-i18n="rebBanner">Built for Rwanda's Competence-Based Curriculum - REB aligned</span>
-            </div>
-            <h1 data-i18n="heroHeadline">Plan Smarter Lessons in 3D Clarity for Every Rwandan Classroom.</h1>
-            <p class="hero-sub" data-i18n="welcomeSub">
-              Your intelligent teaching companion for Rwanda's Competence-Based Curriculum.
-            </p>
-            <div class="hero-cta">
-              <button type="button" class="btn btn-primary" data-launch="lesson" data-i18n="ctaCreateLesson">
-                Create Lesson Plan
-              </button>
-              <button type="button" class="btn btn-ghost" data-launch="dashboard" data-i18n="ctaExplore">
-                Explore Dashboard
-              </button>
-            </div>
-
-            <div class="stats-row">
-              <div class="stat-box" data-tilt>
-                <strong>P1 - S6</strong>
-                <span data-i18n="statLevels">All Primary & Secondary Levels</span>
-              </div>
-              <div class="stat-box" data-tilt>
-                <strong>REB CBC</strong>
-                <span data-i18n="statAligned">Competence-Based Ready</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-stage">
-            <div class="card-3d stage-card main-stage" data-tilt>
-              <div class="stage-header">
-                <span class="chip">3D CBC Studio</span>
-                <span class="status-live">Ready</span>
-              </div>
-              <h3>Competence-Based Lesson Blueprint</h3>
-              <p>Structured learning outcomes, learner-centred activities, cross-cutting issues, and assessment rubrics.</p>
-              <div class="mini-preview">
-                <div class="preview-row"><span>Subject</span><strong>Mathematics / Science</strong></div>
-                <div class="preview-row"><span>Mode</span><strong>Interactive & Print Ready</strong></div>
-                <div class="preview-row"><span>Languages</span><strong>EN · RW · FR</strong></div>
-              </div>
-              <button type="button" class="btn btn-accent full-width" data-launch="lesson" data-i18n="ctaCreateLesson">
-                Create Lesson Plan
-              </button>
-            </div>
-
-            <div class="card-3d floating-badge badge-top" data-tilt>
-              <span>AI Assistant</span>
-              <strong>Instant CBC Guidance</strong>
-            </div>
-            <div class="card-3d floating-badge badge-bottom" data-tilt>
-              <span>Quizzes & Keys</span>
-              <strong>Marking Guides Ready</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FOUR 3D TOOL CARDS -->
-      <section id="features" class="section">
-        <div class="container">
-          <div class="section-head">
-            <span class="eyebrow" data-i18n="eyebrowTools">AI TEACHING SUITE</span>
-            <h2 data-i18n="featuresHeading">Four 3D-Crafted Tools Built for Teachers</h2>
-            <p data-i18n="featuresSub">Click any card to jump straight into that tool inside your GHAD AI workspace.</p>
-          </div>
-
-          <div class="grid-4">
-            <article class="card-3d tool-card" data-launch="lesson" data-tilt>
-              <div class="tool-icon">01</div>
-              <h3 data-i18n="cardLesson">AI Lesson Generator</h3>
-              <p data-i18n="cardLessonDesc">Create complete, REB-aligned lesson plans in seconds.</p>
-              <span class="card-link" data-i18n="openTool">Launch Tool -></span>
-            </article>
-
-            <article class="card-3d tool-card" data-launch="assistant" data-tilt>
-              <div class="tool-icon">02</div>
-              <h3 data-i18n="cardAssistant">AI Teaching Assistant</h3>
-              <p data-i18n="cardAssistantDesc">Ask any educational question and get expert guidance.</p>
-              <span class="card-link" data-i18n="openTool">Launch Tool -></span>
-            </article>
-
-            <article class="card-3d tool-card" data-launch="assessment" data-tilt>
-              <div class="tool-icon">03</div>
-              <h3 data-i18n="cardAssessment">Assessment Generator</h3>
-              <p data-i18n="cardAssessmentDesc">Generate quizzes, tests and marking guides instantly.</p>
-              <span class="card-link" data-i18n="openTool">Launch Tool -></span>
-            </article>
-
-            <article class="card-3d tool-card" data-launch="methodology" data-tilt>
-              <div class="tool-icon">04</div>
-              <h3 data-i18n="cardMethodology">Teaching Methodologies</h3>
-              <p data-i18n="cardMethodologyDesc">Discover learner-centred methods for your topic.</p>
-              <span class="card-link" data-i18n="openTool">Launch Tool -></span>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- 3-STEP WORKFLOW -->
-      <section id="how-it-works" class="section section-alt">
-        <div class="container">
-          <div class="section-head">
-            <span class="eyebrow" data-i18n="eyebrowSteps">SIMPLE WORKFLOW</span>
-            <h2 data-i18n="howHeading">From Topic to Classroom Ready in 3 Steps</h2>
-          </div>
-
-          <div class="grid-3">
-            <div class="card-3d step-card" data-tilt>
-              <span class="step-num">Step 01</span>
-              <h3 data-i18n="step1Title">Choose Subject & Class</h3>
-              <p data-i18n="step1Desc">Select P1 through S6, your subject, language (English, Kinyarwanda, or French), and topic.</p>
-            </div>
-            <div class="card-3d step-card" data-tilt>
-              <span class="step-num">Step 02</span>
-              <h3 data-i18n="step2Title">Generate with Gemini AI</h3>
-              <p data-i18n="step2Desc">GHAD AI structures competences, cross-cutting issues, learner activities, and marking guides.</p>
-            </div>
-            <div class="card-3d step-card" data-tilt>
-              <span class="step-num">Step 03</span>
-              <h3 data-i18n="step3Title">Copy, Print & Teach</h3>
-              <p data-i18n="step3Desc">Copy your formatted plan with one click and walk into class confident and prepared.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA BANNER -->
-      <section id="curriculum" class="section">
-        <div class="container">
-          <div class="card-3d cta-banner" data-tilt>
-            <div>
-              <h2 data-i18n="ctaBannerTitle">Ready to Transform Your Lesson Preparation?</h2>
-              <p data-i18n="ctaBannerSub">Enter the interactive workspace now with no sign-up barrier, built for Rwandan educators.</p>
-            </div>
-            <button type="button" class="btn btn-accent" data-launch="dashboard" data-i18n="launchApp">
-              Open Workspace ->
-            </button>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer-inner">
-        <span>GHAD AI · <span data-i18n="rebBanner">Built for Rwanda's Competence-Based Curriculum - REB aligned</span></span>
-        <button type="button" class="link-btn" data-launch="resources" data-i18n="navResources">Educational Resources</button>
-      </div>
-    </footer>
-  </div>
-
-  <!-- WORKSPACE APP -->
-  <div id="workspaceApp" class="workspace-app" style="display: none;">
-    <aside id="sidebar" class="sidebar">
-      <div class="sidebar-top">
-        <div class="brand">
-          <span class="brand-badge">G</span>
-          <span class="brand-text">
-            <strong>GHAD AI</strong>
-            <small data-i18n="brandTagline">Lesson Planner</small>
-          </span>
-        </div>
-        <button type="button" id="backToHomeBtn" class="btn btn-ghost btn-xs" data-i18n="navHome">Home Page</button>
-      </div>
-
-      <nav class="sidebar-nav" aria-label="Workspace Tools">
-        <button type="button" class="nav-btn active" data-view="dashboard" data-i18n="navDashboard">Dashboard</button>
-        <button type="button" class="nav-btn" data-view="lesson" data-i18n="navLesson">AI Lesson Generator</button>
-        <button type="button" class="nav-btn" data-view="assistant" data-i18n="navAssistant">AI Teaching Assistant</button>
-        <button type="button" class="nav-btn" data-view="assessment" data-i18n="navAssessment">Assessment Generator</button>
-        <button type="button" class="nav-btn" data-view="methodology" data-i18n="navMethodology">Teaching Methodologies</button>
-        <button type="button" class="nav-btn" data-view="resources" data-i18n="navResources">Educational Resources</button>
-        <button type="button" class="nav-btn" data-view="settings" data-i18n="navSettings">Settings</button>
-      </nav>
-
-      <div class="sidebar-footer">
-        <label class="sr-only" for="langSelect">Language</label>
-        <select id="langSelect" class="select-full">
-          <option value="en">English</option>
-          <option value="rw">Kinyarwanda</option>
-          <option value="fr">Francais</option>
-        </select>
-      </div>
-    </aside>
-
-    <div class="workspace-main">
-      <header class="mobile-bar">
-        <button type="button" id="menuToggle" class="btn btn-ghost btn-sm" aria-label="Toggle Menu">Menu</button>
-        <strong>GHAD AI</strong>
-        <select id="themeSelect" class="select-compact" aria-label="Theme">
-          <option value="auto" data-i18n="themeAuto">Auto</option>
-          <option value="light" data-i18n="themeLight">Light</option>
-          <option value="dark" data-i18n="themeDark">Dark</option>
-        </select>
-      </header>
-
-      <div class="workspace-content">
-        <!-- DASHBOARD VIEW -->
-        <section id="view-dashboard" class="view active">
-          <div class="view-header">
-            <h1 data-i18n="welcome">Welcome to GHAD AI</h1>
-            <p data-i18n="welcomeSub">Your intelligent teaching companion for Rwanda's Competence-Based Curriculum.</p>
-          </div>
-
-          <div class="grid-2">
-            <div class="card-3d feature-card" data-view="lesson" data-tilt>
-              <h3 data-i18n="cardLesson">AI Lesson Generator</h3>
-              <p data-i18n="cardLessonDesc">Create complete, REB-aligned lesson plans in seconds.</p>
-            </div>
-            <div class="card-3d feature-card" data-view="assistant" data-tilt>
-              <h3 data-i18n="cardAssistant">AI Teaching Assistant</h3>
-              <p data-i18n="cardAssistantDesc">Ask any educational question and get expert guidance.</p>
-            </div>
-            <div class="card-3d feature-card" data-view="assessment" data-tilt>
-              <h3 data-i18n="cardAssessment">Assessment Generator</h3>
-              <p data-i18n="cardAssessmentDesc">Generate quizzes, tests and marking guides instantly.</p>
-            </div>
-            <div class="card-3d feature-card" data-view="methodology" data-tilt>
-              <h3 data-i18n="cardMethodology">Teaching Methodologies</h3>
-              <p data-i18n="cardMethodologyDesc">Discover learner-centred methods for your topic.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- LESSON GENERATOR VIEW -->
-        <section id="view-lesson" class="view">
-          <div class="view-header">
-            <h1 data-i18n="lessonTitle">GHAD AI Lesson Generator</h1>
-            <p data-i18n="lessonSub">Enter a few details and let AI build your complete lesson plan.</p>
-          </div>
-
-          <div class="panel form-grid">
-            <div class="field">
-              <label for="lessonSubject" data-i18n="subject">Subject</label>
-              <select id="lessonSubject">
-                <option value="Mathematics" data-i18n="subjMath">Mathematics</option>
-                <option value="English" data-i18n="subjEnglish">English</option>
-                <option value="Kinyarwanda" data-i18n="subjKiny">Kinyarwanda</option>
-                <option value="French" data-i18n="subjFrench">French</option>
-                <option value="Science & Elementary Technology" data-i18n="subjScience">Science & Elementary Technology</option>
-                <option value="Social Studies" data-i18n="subjSocial">Social Studies</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="lessonClass" data-i18n="classGrade">Class / Grade</label>
-              <select id="lessonClass">
-                <option>P1</option><option>P2</option><option>P3</option>
-                <option>P4</option><option>P5</option><option>P6</option>
-                <option>S1</option><option>S2</option><option>S3</option>
-                <option>S4</option><option>S5</option><option>S6</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="lessonTopic" data-i18n="lessonTopic">Lesson Topic</label>
-              <input id="lessonTopic" type="text" data-i18n-ph="lessonTopicPh" placeholder="e.g. Fractions" />
-            </div>
-
-            <div class="field">
-              <label for="lessonDuration" data-i18n="duration">Duration (min)</label>
-              <input id="lessonDuration" type="number" value="40" min="10" max="180" />
-            </div>
-
-            <div class="field">
-              <label for="lessonUnit" data-i18n="unitTitle">Unit Title</label>
-              <input id="lessonUnit" type="text" data-i18n-ph="unitTitlePh" placeholder="e.g. Numbers and Operations" />
-            </div>
-
-            <div class="field">
-              <label for="lessonLearners" data-i18n="learners">Number of Learners</label>
-              <input id="lessonLearners" type="text" data-i18n-ph="learnersPh" placeholder="e.g. 45" />
-            </div>
-
-            <div class="field full-span">
-              <label for="lessonExtra" data-i18n="extraInstructions">Additional Instructions</label>
-              <textarea id="lessonExtra" rows="3" data-i18n-ph="extraPh" placeholder="Any special requirements..."></textarea>
-            </div>
-
-            <div class="field full-span">
-              <button type="button" id="generateLesson" class="btn btn-primary" data-i18n="generateLesson">
-                Generate Lesson Plan
-              </button>
-            </div>
-          </div>
-
-          <div id="lessonOutput" class="panel result-panel" style="display: none;">
-            <div class="result-head">
-              <h3 data-i18n="lessonResult">Generated Lesson Plan</h3>
-              <button type="button" id="copyLesson" class="btn btn-ghost btn-sm" data-i18n="copy">Copy</button>
-            </div>
-            <pre id="lessonBody" class="result-body"></pre>
-          </div>
-        </section>
-
-        <!-- ASSISTANT VIEW -->
-        <section id="view-assistant" class="view">
-          <div class="view-header">
-            <h1 data-i18n="assistantTitle">AI Teaching Assistant</h1>
-            <p data-i18n="assistantSub">Ask any question about teaching, classroom management or curriculum.</p>
-          </div>
-
-          <div class="panel chat-panel">
-            <div id="chatMessages" class="chat-messages">
-              <div class="chat-msg ai">
-                <div class="msg-avatar">G</div>
-                <div class="msg-bubble" data-i18n="assistantWelcome">
-                  Hello! I am your GHAD teaching assistant. Ask me anything about teaching in Rwanda's CBC.
-                </div>
-              </div>
-            </div>
-
-            <div class="chat-input-row">
-              <textarea id="chatInput" rows="2" data-i18n-ph="chatPh" placeholder="Type your question..."></textarea>
-              <button type="button" id="sendChat" class="btn btn-primary" data-i18n="send">Send</button>
-            </div>
-          </div>
-        </section>
-
-        <!-- ASSESSMENT VIEW -->
-        <section id="view-assessment" class="view">
-          <div class="view-header">
-            <h1 data-i18n="assessmentTitle">AI Assessment Generator</h1>
-            <p data-i18n="assessmentSub">Generate quizzes, tests and marking guides for any topic.</p>
-          </div>
-
-          <div class="panel form-grid">
-            <div class="field">
-              <label for="assessSubject" data-i18n="subject">Subject</label>
-              <select id="assessSubject">
-                <option value="Mathematics" data-i18n="subjMath">Mathematics</option>
-                <option value="English" data-i18n="subjEnglish">English</option>
-                <option value="Kinyarwanda" data-i18n="subjKiny">Kinyarwanda</option>
-                <option value="French" data-i18n="subjFrench">French</option>
-                <option value="Science & Elementary Technology" data-i18n="subjScience">Science & Elementary Technology</option>
-                <option value="Social Studies" data-i18n="subjSocial">Social Studies</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="assessClass" data-i18n="classGrade">Class / Grade</label>
-              <select id="assessClass">
-                <option>P1</option><option>P2</option><option>P3</option>
-                <option>P4</option><option>P5</option><option>P6</option>
-                <option>S1</option><option>S2</option><option>S3</option>
-                <option>S4</option><option>S5</option><option>S6</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="assessTopic" data-i18n="topic">Topic</label>
-              <input id="assessTopic" type="text" data-i18n-ph="topicPh" placeholder="e.g. Multiplication" />
-            </div>
-
-            <div class="field">
-              <label for="assessCount" data-i18n="numQuestions">Number of Questions</label>
-              <input id="assessCount" type="number" value="10" min="1" max="50" />
-            </div>
-
-            <div class="field">
-              <label for="assessDifficulty" data-i18n="difficulty">Difficulty</label>
-              <select id="assessDifficulty">
-                <option value="easy" data-i18n="difficultyEasy">Easy</option>
-                <option value="medium" selected data-i18n="difficultyMedium">Medium</option>
-                <option value="hard" data-i18n="difficultyHard">Hard</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="assessType" data-i18n="questionTypes">Question Types</label>
-              <select id="assessType">
-                <option value="mixed" data-i18n="qMixed">Mixed</option>
-                <option value="mcq" data-i18n="qMCQ">Multiple Choice</option>
-                <option value="tf" data-i18n="qTF">True / False</option>
-                <option value="short" data-i18n="qShort">Short Answer</option>
-              </select>
-            </div>
-
-            <div class="field full-span">
-              <button type="button" id="generateAssessment" class="btn btn-primary" data-i18n="generateAssessment">
-                Generate Assessment
-              </button>
-            </div>
-          </div>
-
-          <div id="assessmentOutput" class="panel result-panel" style="display: none;">
-            <div class="result-head">
-              <h3 data-i18n="assessmentResult">Generated Assessment</h3>
-              <button type="button" id="copyAssessment" class="btn btn-ghost btn-sm" data-i18n="copy">Copy</button>
-            </div>
-            <pre id="assessmentBody" class="result-body"></pre>
-          </div>
-        </section>
-
-        <!-- METHODOLOGY VIEW -->
-        <section id="view-methodology" class="view">
-          <div class="view-header">
-            <h1 data-i18n="methodologyTitle">AI Teaching Methodology Assistant</h1>
-            <p data-i18n="methodologySub">Get recommended teaching methods for your subject and topic.</p>
-          </div>
-
-          <div class="panel form-grid">
-            <div class="field">
-              <label for="methodSubject" data-i18n="subject">Subject</label>
-              <select id="methodSubject">
-                <option value="Mathematics" data-i18n="subjMath">Mathematics</option>
-                <option value="English" data-i18n="subjEnglish">English</option>
-                <option value="Kinyarwanda" data-i18n="subjKiny">Kinyarwanda</option>
-                <option value="French" data-i18n="subjFrench">French</option>
-                <option value="Science & Elementary Technology" data-i18n="subjScience">Science & Elementary Technology</option>
-                <option value="Social Studies" data-i18n="subjSocial">Social Studies</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="methodClass" data-i18n="classGrade">Class / Grade</label>
-              <select id="methodClass">
-                <option>P1</option><option>P2</option><option>P3</option>
-                <option>P4</option><option>P5</option><option>P6</option>
-                <option>S1</option><option>S2</option><option>S3</option>
-                <option>S4</option><option>S5</option><option>S6</option>
-              </select>
-            </div>
-
-            <div class="field full-span">
-              <label for="methodTopic" data-i18n="topic">Topic</label>
-              <input id="methodTopic" type="text" data-i18n-ph="topicPh" placeholder="e.g. Multiplication" />
-            </div>
-
-            <div class="field full-span">
-              <button type="button" id="generateMethodology" class="btn btn-primary" data-i18n="generateMethodology">
-                Recommend Methods
-              </button>
-            </div>
-          </div>
-
-          <div id="methodologyOutput" class="panel result-panel" style="display: none;">
-            <div class="result-head">
-              <h3 data-i18n="methodologyResult">Recommended Methodologies</h3>
-              <button type="button" id="copyMethodology" class="btn btn-ghost btn-sm" data-i18n="copy">Copy</button>
-            </div>
-            <pre id="methodologyBody" class="result-body"></pre>
-          </div>
-        </section>
-
-        <!-- RESOURCES VIEW -->
-        <section id="view-resources" class="view">
-          <div class="view-header">
-            <h1 data-i18n="resourcesTitle">Educational Resources</h1>
-            <p data-i18n="resourcesSub">Curated links and materials for Rwandan teachers.</p>
-          </div>
-
-          <div class="grid-2">
-            <div class="panel">
-              <h3>REB</h3>
-              <p data-i18n="resREB">Rwanda Education Board - official curriculum and syllabi.</p>
-            </div>
-            <div class="panel">
-              <h3>MINEDUC</h3>
-              <p data-i18n="resMINEDUC">Ministry of Education - policies and guidelines.</p>
-            </div>
-            <div class="panel">
-              <h3>e-Learning</h3>
-              <p data-i18n="resElearning">Digital resources and interactive lessons.</p>
-            </div>
-            <div class="panel">
-              <h3>Practice & Media</h3>
-              <p data-i18n="resKhan">Free practice exercises and instructional videos.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- SETTINGS VIEW -->
-        <section id="view-settings" class="view">
-          <div class="view-header">
-            <h1 data-i18n="settingsTitle">Settings</h1>
-            <p data-i18n="settingsSub">Customise your GHAD AI experience.</p>
-          </div>
-
-          <div class="panel form-grid">
-            <div class="field">
-              <label for="settingsLang" data-i18n="language">Language</label>
-              <select id="settingsLang">
-                <option value="en">English</option>
-                <option value="rw">Kinyarwanda</option>
-                <option value="fr">Francais</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="settingsTheme" data-i18n="theme">Theme</label>
-              <select id="settingsTheme">
-                <option value="auto" data-i18n="themeAuto">Auto</option>
-                <option value="light" data-i18n="themeLight">Light</option>
-                <option value="dark" data-i18n="themeDark">Dark</option>
-              </select>
-            </div>
-
-            <div class="field full-span">
-              <p class="muted-note" data-i18n="settingsNote">
-                GHAD AI uses Google Gemini to generate content. Your API key is stored securely on the server.
-              </p>
-            </div>
-          </div>
-        </section>
+      <div class="hero-cta">
+        <button class="big" data-launch="lesson" data-i18n="cta_lesson">✨ Start a lesson plan</button>
+        <button class="o" data-launch="assistant" data-i18n="cta_assistant">💬 Ask the AI assistant</button>
       </div>
     </div>
-  </div>
 
-  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
-  <script src="/app.js?v=20261123"></script>
+    <div class="tools-grid">
+      <button class="tool-card card3d" data-tilt data-launch="lesson"><span>📘</span><h3 data-i18n="tool_lesson">Lesson Planner</h3><p data-i18n="tool_lesson_d">AI writes the full REB CBC plan table.</p></button>
+      <button class="tool-card card3d" data-tilt data-launch="assistant"><span>💬</span><h3 data-i18n="tool_assist">AI Assistant</h3><p data-i18n="tool_assist_d">Ask anything, with saved chat history.</p></button>
+      <button class="tool-card card3d" data-tilt data-launch="assessment"><span>📝</span><h3 data-i18n="tool_assess">Assessment</h3><p data-i18n="tool_assess_d">Generate quizzes and test items.</p></button>
+      <button class="tool-card card3d" data-tilt data-launch="methodology"><span>🧠</span><h3 data-i18n="tool_method">Methodology</h3><p data-i18n="tool_method_d">Learner-centred teaching strategies.</p></button>
+    </div>
+  </div>
+  <div class="foot noprint" data-i18n="foot">Made for teachers. Your saved plans stay on this device.</div>
+</div>
+
+<!-- ============ WORKSPACE ============ -->
+<div id="workspaceApp" hidden>
+  <header class="top noprint">
+    <div class="in">
+      <b><span class="logo-badge">IG</span> GHAD AI</b>
+      <button class="o sm" id="backToHomeBtn" data-i18n="back_home">← Home</button>
+      <select id="langWs" aria-label="Language"><option value="en">English</option><option value="rw">Ikinyarwanda</option><option value="fr">Français</option></select>
+    </div>
+  </header>
+
+  <button id="menuToggle" class="menu-toggle noprint" aria-label="Menu">☰</button>
+
+  <div class="wrap workspace-wrap">
+    <nav class="tabs noprint" id="tabs">
+      <button class="tab active" data-view="lesson" data-i18n="tool_lesson">Lesson Planner</button>
+      <button class="tab" data-view="assistant" data-i18n="tool_assist">AI Assistant</button>
+      <button class="tab" data-view="assessment" data-i18n="tool_assess">Assessment</button>
+      <button class="tab" data-view="methodology" data-i18n="tool_method">Methodology</button>
+      <button class="tab" data-view="library" data-i18n="tool_library">My Plans</button>
+      <button class="tab" data-view="settings" data-i18n="tool_settings">Settings</button>
+    </nav>
+
+    <!-- LESSON PLANNER -->
+    <section id="view-lesson" class="view active">
+      <div class="card noprint" id="form">
+        <div class="g">
+          <div class="full sec" data-i18n="sec_id">🏫 Identification</div>
+          <div class="full"><label data-i18n="school">School name</label><input id="school"></div>
+          <div class="full"><label data-i18n="teacher">Teacher's name</label><input id="teacher"></div>
+          <div><label data-i18n="term">Term</label><select id="term"><option>1</option><option>2</option><option>3</option></select></div>
+          <div><label data-i18n="date">Date</label><input id="date" type="date"></div>
+          <div><label data-i18n="subject">Subject</label><select id="subject"><option value="Social Studies">Social Studies</option><option value="Religious Education">Religious Education</option><option value="English">English</option><option value="Kinyarwanda">Kinyarwanda</option><option value="Kiswahili">Kiswahili</option><option value="French">French</option><option value="Mathematics">Mathematics</option><option value="Science and Elementary Technology">Science and Elementary Technology</option><option value="Creative Arts">Creative Arts</option><option value="Physical Education">Physical Education</option><option value="Other">Other</option></select><input id="subjo" placeholder="Type subject" style="display:none;margin-top:6px"></div>
+          <div><label data-i18n="class">Class</label><input id="cls" list="cl" placeholder="e.g. P4"><datalist id="cl"><option>P1</option><option>P2</option><option>P3</option><option>P4</option><option>P5</option><option>P6</option><option>S1</option><option>S2</option><option>S3</option><option>S4</option><option>S5</option><option>S6</option></datalist></div>
+          <div><label data-i18n="unitno">Unit No</label><input id="unit"></div>
+          <div><label data-i18n="lessonno">Lesson No (e.g. 2 of 5)</label><input id="lesson"></div>
+          <div><label data-i18n="duration">Duration (min)</label><input id="dur" type="number" value="40"></div>
+          <div><label data-i18n="size">Class size</label><input id="size" type="number"></div>
+          <div class="full hint" data-i18n="min_hint">Minutes for each step (leave empty to let the AI/app divide them).</div>
+          <div><label data-i18n="min1">Introduction (min)</label><input id="min1" type="number" min="1" placeholder="auto"></div>
+          <div><label data-i18n="min2">Development (min)</label><input id="min2" type="number" min="1" placeholder="auto"></div>
+          <div><label data-i18n="min3">Conclusion (min)</label><input id="min3" type="number" min="1" placeholder="auto"></div>
+          <div class="full"><label data-i18n="sen">Special Educational Needs (type and number of learners)</label><input id="sen"></div>
+          <div class="full"><label data-i18n="senacc">SEN: how these learners will be accommodated</label><input id="senacc"></div>
+
+          <div class="full sec" data-i18n="sec_curr">📚 Curriculum and objective</div>
+          <div class="full"><label data-i18n="utitle">Unit title</label><input id="utitle"></div>
+          <div class="full"><label data-i18n="ltitle">Title of the lesson</label><input id="ltitle" placeholder="e.g. Describing my family"></div>
+          <div class="full hint" data-i18n="obj_hint">Instructional objective — leave empty and the AI will write it (condition, who, action, content, standard).</div>
+          <div><label data-i18n="o1">1. Condition</label><input id="o1"></div>
+          <div><label data-i18n="o3">3. Action (verb)</label><input id="o3"></div>
+          <div><label data-i18n="o4">4. Content</label><input id="o4"></div>
+          <div><label data-i18n="o5">5. Standard</label><input id="o5"></div>
+
+          <div class="full sec" data-i18n="sec_del">🎯 Delivery</div>
+          <div><label data-i18n="loc">Plan for this class</label><select id="loc"><option value="Inside">Inside</option><option value="Outside">Outside</option></select></div>
+          <div class="full"><label data-i18n="mat">Learning materials (comma separated)</label><input id="mat"></div>
+          <div class="full"><label data-i18n="ref">References</label><input id="ref"></div>
+          <div class="full hint" data-i18n="ai_hint">✨ Leave Introduction / Development / Conclusion empty and the AI will write all teacher and learner activities for you. Anything you type yourself is kept.</div>
+          <button class="big" id="genBtn" data-i18n="generate">✨ Generate lesson plan</button>
+          <button class="o" id="newBtn" data-i18n="new_plan">New blank plan</button>
+        </div>
+      </div>
+
+      <div id="out" style="display:none">
+        <div class="noprint row-btns">
+          <button id="saveBtn" data-i18n="save">💾 Save plan</button>
+          <button id="printBtn" data-i18n="print">🖨️ Print / Save PDF</button>
+          <button class="o" id="topBtn" data-i18n="top">Top</button>
+          <div class="hint"><span data-i18n="edit_tip">Tip: tap any box in the plan to edit it, including the minutes.</span> <b id="tot"></b></div>
+        </div>
+        <div class="scroll"><table id="plan"></table></div>
+      </div>
+    </section>
+
+    <!-- ASSISTANT -->
+    <section id="view-assistant" class="view">
+      <div class="card noprint chat-tools">
+        <button class="o sm" id="newChatBtn" data-i18n="new_chat">➕ New chat</button>
+        <button class="o sm danger" id="delChatBtn" data-i18n="del_chat">🗑️ Delete history</button>
+        <span class="hint" data-i18n="chat_saved">Your chats are saved on this device.</span>
+      </div>
+      <div class="card">
+        <div id="chatMessages" class="chat-messages"></div>
+        <div class="chat-input-row">
+          <input id="chatInput" data-i18n-ph="chat_ph" placeholder="Type your question…">
+          <button id="sendChat" data-i18n="send">Send</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASSESSMENT -->
+    <section id="view-assessment" class="view">
+      <div class="card">
+        <div class="g">
+          <div><label data-i18n="subject">Subject</label><input id="assessSubject"></div>
+          <div><label data-i18n="class">Class</label><input id="assessClass"></div>
+          <div><label data-i18n="topic">Topic</label><input id="assessTopic"></div>
+          <div><label data-i18n="questions">Questions</label><input id="assessCount" type="number" value="5" min="1" max="50"></div>
+          <div><label data-i18n="difficulty">Difficulty</label><select id="assessDifficulty"><option value="easy" data-i18n="easy">Easy</option><option value="medium" selected data-i18n="medium">Medium</option><option value="hard" data-i18n="hard">Hard</option></select></div>
+          <div><label data-i18n="atype">Type</label><select id="assessType"><option value="mcq" data-i18n="mcq">Multiple Choice</option><option value="short" data-i18n="short_a">Short Answer</option><option value="mixed" data-i18n="mixed">Mixed</option></select></div>
+          <button class="big" id="generateAssessment" data-i18n="gen_assess">✨ Generate Assessment</button>
+        </div>
+        <div id="assessmentOutput" class="output hidden">
+          <div class="row-btns"><strong data-i18n="out_assess">Assessment</strong><button id="copyAssessment" class="o sm" data-i18n="copy">📋 Copy</button></div>
+          <div id="assessmentBody" class="output-body"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METHODOLOGY -->
+    <section id="view-methodology" class="view">
+      <div class="card">
+        <div class="g">
+          <div><label data-i18n="subject">Subject</label><input id="methodSubject"></div>
+          <div><label data-i18n="class">Class</label><input id="methodClass"></div>
+          <div><label data-i18n="topic">Topic</label><input id="methodTopic"></div>
+          <button class="big" id="generateMethodology" data-i18n="gen_method">✨ Generate Methodology</button>
+        </div>
+        <div id="methodologyOutput" class="output hidden">
+          <div class="row-btns"><strong data-i18n="out_method">Methodology</strong><button id="copyMethodology" class="o sm" data-i18n="copy">📋 Copy</button></div>
+          <div id="methodologyBody" class="output-body"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRARY -->
+    <section id="view-library" class="view">
+      <div class="card">
+        <div class="sec" data-i18n="my_plans">My lesson plans</div>
+        <div id="lib"></div>
+        <div class="hint" data-i18n="plans_saved">Plans are saved in this browser on this device.</div>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="view-settings" class="view">
+      <div class="card settings">
+        <label data-i18n="lang_label">Language</label>
+        <select id="langSet"><option value="en">English</option><option value="rw">Ikinyarwanda</option><option value="fr">Français</option></select>
+        <label data-i18n="theme_label">Theme</label>
+        <select id="themeSet"><option value="auto">🌓 Auto</option><option value="light">☀️ Light</option><option value="dark">🌙 Dark</option></select>
+        <button class="o" id="clearAllBtn" data-i18n="clear_all">🗑️ Delete all saved plans &amp; chats</button>
+      </div>
+    </section>
+  </div>
+  <div class="foot noprint" data-i18n="foot">Made for teachers. Your saved plans stay on this device.</div>
+</div>
+
+<div id="toastContainer" class="toast-container" aria-live="polite"></div>
+<script src="app.js"></script>
 </body>
 </html>
