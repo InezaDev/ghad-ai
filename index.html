@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GHAD AI · REB Lesson Plan Generator for Rwanda Teachers</title>
 <meta name="description" content="AI-powered lesson plan generator for teachers in Rwanda. Make a Competence-Based Curriculum (REB format) lesson plan for any subject, edit it, save it and print it.">
+<meta name="theme-color" content="#1f7a4d">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f7a4d'/%3E%3Cpath d='M32 14 50 22 32 30 14 22Z' fill='%23fff'/%3E%3Cpath d='M20 27v10c0 4 6 7 12 7s12-3 12-7V27l-12 5.4Z' fill='%23ffffffcc'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,31 +19,46 @@
     <div class="in">
       <b><span class="logo-badge">IG</span> GHAD AI</b>
       <span data-i18n="brand_tag">Competence-Based Curriculum · REB format</span>
-      <select id="lang" aria-label="Language"><option value="en">English</option><option value="rw">Ikinyarwanda</option><option value="fr">Français</option></select>
-      <select id="theme" aria-label="Theme"><option value="auto">🌓 Auto</option><option value="light">☀️ Light</option><option value="dark">🌙 Dark</option></select>
+      <span class="hdr-controls">
+        <select id="lang" aria-label="Language"><option value="en">English</option><option value="rw">Ikinyarwanda</option><option value="fr">Français</option></select>
+        <select id="theme" aria-label="Theme"><option value="auto">🌓 Auto</option><option value="light">☀️ Light</option><option value="dark">🌙 Dark</option></select>
+      </span>
     </div>
   </header>
 
   <div class="wrap">
     <div class="hero card3d" data-tilt>
-      <h1 data-i18n="hero_title">Plan your lesson in minutes</h1>
-      <p data-i18n="hero_sub">AI-powered: fill in a few details, and the AI writes your full REB competence-based lesson plan. Edit, save and print.</p>
+      <span class="hero-badge" data-i18n="hero_badge">✦ Official REB CBC format · 3 languages</span>
+      <h1><span data-i18n="hero_title">Plan your lesson in minutes</span><br><span class="grad-text" data-i18n="hero_title2">with the power of AI</span></h1>
+      <p class="hero-sub" data-i18n="hero_sub">Fill in a few details — subject, class and topic — and the AI writes your complete competence-based lesson plan, ready to edit, save and print.</p>
       <div class="steps">
-        <div data-i18n="step1">1 · Fill in a few lesson details</div>
-        <div data-i18n="step2">2 · Press Generate — the AI writes everything</div>
-        <div data-i18n="step3">3 · Edit, save and print</div>
+        <div><i>1</i><span data-i18n="step1">Fill in a few lesson details</span></div>
+        <div><i>2</i><span data-i18n="step2">Press Generate — the AI writes everything</span></div>
+        <div><i>3</i><span data-i18n="step3">Edit, save and print</span></div>
       </div>
       <div class="hero-cta">
         <button class="big" data-launch="lesson" data-i18n="cta_lesson">✨ Start a lesson plan</button>
         <button class="o" data-launch="assistant" data-i18n="cta_assistant">💬 Ask the AI assistant</button>
       </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>3</strong><span data-i18n="stat_langs">Languages</span></div>
+        <div class="stat"><strong>P1–S6</strong><span data-i18n="stat_levels">All Levels</span></div>
+        <div class="stat"><strong>100%</strong><span data-i18n="stat_free">Free for teachers</span></div>
+      </div>
     </div>
 
     <div class="tools-grid">
-      <button class="tool-card card3d" data-tilt data-launch="lesson"><span>📘</span><h3 data-i18n="tool_lesson">Lesson Planner</h3><p data-i18n="tool_lesson_d">AI writes the full REB CBC plan table.</p></button>
-      <button class="tool-card card3d" data-tilt data-launch="assistant"><span>💬</span><h3 data-i18n="tool_assist">AI Assistant</h3><p data-i18n="tool_assist_d">Ask anything, with saved chat history.</p></button>
-      <button class="tool-card card3d" data-tilt data-launch="assessment"><span>📝</span><h3 data-i18n="tool_assess">Assessment</h3><p data-i18n="tool_assess_d">Generate quizzes and test items.</p></button>
-      <button class="tool-card card3d" data-tilt data-launch="methodology"><span>🧠</span><h3 data-i18n="tool_method">Methodology</h3><p data-i18n="tool_method_d">Learner-centred teaching strategies.</p></button>
+      <button class="tool-card card3d" data-tilt data-launch="lesson"><span>📘</span><h3 data-i18n="tool_lesson">Lesson Planner</h3><p data-i18n="tool_lesson_d">AI writes the full REB CBC plan table.</p><em data-i18n="open">Open →</em></button>
+      <button class="tool-card card3d" data-tilt data-launch="assistant"><span>💬</span><h3 data-i18n="tool_assist">AI Assistant</h3><p data-i18n="tool_assist_d">Ask anything, with saved chat history.</p><em data-i18n="open">Open →</em></button>
+      <button class="tool-card card3d" data-tilt data-launch="assessment"><span>📝</span><h3 data-i18n="tool_assess">Assessment</h3><p data-i18n="tool_assess_d">Generate quizzes and test items.</p><em data-i18n="open">Open →</em></button>
+      <button class="tool-card card3d" data-tilt data-launch="methodology"><span>🧠</span><h3 data-i18n="tool_method">Methodology</h3><p data-i18n="tool_method_d">Learner-centred teaching strategies.</p><em data-i18n="open">Open →</em></button>
+    </div>
+
+    <div class="trust-strip">
+      <div class="trust-item">🏫 <span data-i18n="trust_1">Built for Rwandan schools</span></div>
+      <div class="trust-item">📗 <span data-i18n="trust_2">Official REB CBC format</span></div>
+      <div class="trust-item">🌐 <span data-i18n="trust_3">3 languages, one click</span></div>
+      <div class="trust-item">🔒 <span data-i18n="trust_4">Your data stays yours</span></div>
     </div>
   </div>
   <div class="foot noprint" data-i18n="foot">Made for teachers. Your saved plans stay on this device.</div>
@@ -53,8 +69,10 @@
   <header class="top noprint">
     <div class="in">
       <b><span class="logo-badge">IG</span> GHAD AI</b>
-      <button class="o sm" id="backToHomeBtn" data-i18n="back_home">← Home</button>
-      <select id="langWs" aria-label="Language"><option value="en">English</option><option value="rw">Ikinyarwanda</option><option value="fr">Français</option></select>
+      <span class="hdr-controls">
+        <button class="o sm" id="backToHomeBtn" data-i18n="back_home">← Home</button>
+        <select id="langWs" aria-label="Language"><option value="en">English</option><option value="rw">Ikinyarwanda</option><option value="fr">Français</option></select>
+      </span>
     </div>
   </header>
 
@@ -98,6 +116,7 @@
 
       <div id="out" style="display:none">
         <div class="noprint row-btns">
+          <strong data-i18n="out_lesson">Lesson plan</strong>
           <button id="saveBtn" data-i18n="save">💾 Save plan</button>
           <button id="printBtn" data-i18n="print">🖨️ Print / Save PDF</button>
           <button class="o" id="topBtn" data-i18n="top">Top</button>
