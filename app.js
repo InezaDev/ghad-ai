@@ -1,14 +1,19 @@
-/* ===================================================================
-   GHAD AI — Frontend Application
-   =================================================================== */
-
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => document.querySelectorAll(s);
 
-/* ===================== I18N ===================== */
 const I18N = {
   en: {
-    brandTagline: "Lesson Planner", navDashboard: "Dashboard", navLesson: "AI Lesson Generator", navAssistant: "AI Teaching Assistant", navAssessment: "Assessment Generator", navMethodology: "Teaching Methodologies", navResources: "Educational Resources", navSettings: "Settings",
+    brandTagline: "Lesson Planner", navHome: "Home Page", navDashboard: "Dashboard", navLesson: "AI Lesson Generator", navAssistant: "AI Teaching Assistant", navAssessment: "Assessment Generator", navMethodology: "Teaching Methodologies", navResources: "Educational Resources", navSettings: "Settings",
+    navFeatures: "Features", navHow: "How It Works", navCurriculum: "REB CBC", launchApp: "Open Workspace →",
+    heroHeadline: "Plan Smarter Lessons in 3D Clarity for Every Rwandan Classroom.",
+    ctaCreateLesson: "✦ Create Lesson Plan", ctaExplore: "Explore Dashboard",
+    statLevels: "All Primary & Secondary Levels", statAligned: "Competence-Based Ready",
+    eyebrowTools: "AI TEACHING SUITE", featuresHeading: "Four 3D-Crafted Tools Built for Teachers", featuresSub: "Click any card to jump straight into that tool inside your GHAD AI workspace.", openTool: "Launch Tool →",
+    eyebrowSteps: "SIMPLE WORKFLOW", howHeading: "From Topic to Classroom Ready in 3 Steps",
+    step1Title: "Choose Subject & Class", step1Desc: "Select P1 through S6, your subject, language (English, Kinyarwanda, or French), and topic.",
+    step2Title: "Generate with Gemini AI", step2Desc: "GHAD AI structures competences, cross-cutting issues, learner activities, and marking guides.",
+    step3Title: "Copy, Print & Teach", step3Desc: "Copy your formatted plan with one click and walk into class confident and prepared.",
+    ctaBannerTitle: "Ready to Transform Your Lesson Preparation?", ctaBannerSub: "Enter the interactive workspace now—no sign-up barrier, built for Rwandan educators.",
     welcome: "Welcome to GHAD AI", welcomeSub: "Your intelligent teaching companion for Rwanda's Competence-Based Curriculum.",
     cardLesson: "AI Lesson Generator", cardLessonDesc: "Create complete, REB-aligned lesson plans in seconds.",
     cardAssistant: "AI Teaching Assistant", cardAssistantDesc: "Ask any educational question and get expert guidance.",
@@ -28,7 +33,17 @@ const I18N = {
     generating: "Generating...", errorPrefix: "Error: ", copied: "Copied to clipboard.", failedToCopy: "Could not copy.", networkError: "Network error."
   },
   rw: {
-    brandTagline: "Gutegura Isomo", navDashboard: "Imbonerahamwe", navLesson: "Kora Isomo na AI", navAssistant: "Umufasha w'Umwarimu", navAssessment: "Kora Isuzuma", navMethodology: "Uburyo bwo Kwigisha", navResources: "Ibikoresho by'Uburezi", navSettings: "Igenamiterere",
+    brandTagline: "Gutegura Isomo", navHome: "Ahabanza", navDashboard: "Imbonerahamwe", navLesson: "Kora Isomo na AI", navAssistant: "Umufasha w'Umwarimu", navAssessment: "Kora Isuzuma", navMethodology: "Uburyo bwo Kwigisha", navResources: "Ibikoresho by'Uburezi", navSettings: "Igenamiterere",
+    navFeatures: "Ibikubiyemo", navHow: "Uko Bikora", navCurriculum: "REB CBC", launchApp: "Injira muri Sisitemu →",
+    heroHeadline: "Tegura Amasomo mu Buryo Bwiza bwa 3D ku Bwarimu bose mu Rwanda.",
+    ctaCreateLesson: "✦ Tegura Isomo", ctaExplore: "Reba Imbonerahamwe",
+    statLevels: "Amashuri Abanza n'Ayisumbuye", statAligned: "Bihuye na REB CBC",
+    eyebrowTools: "IBIKORESHO BYA AI", featuresHeading: "Ibikoresho 4 bya 3D byagenewe Abarimu", featuresSub: "Kanda ku gakarita ako ari ko kose utangire gukoresha GHAD AI.", openTool: "Tangira →",
+    eyebrowSteps: "INTAMBWE ZOROSHYE", howHeading: "Kuva ku Mutwe w'Isomo kugeza mu Ishuri mu Ntambwe 3",
+    step1Title: "Hitamo Isomo n'Umwaka", step1Desc: "Hitamo kuva P1 kugeza S6, ururimi (Icyongereza, Ikinyarwanda, Igifaransa) n'insanganyamatsiko.",
+    step2Title: "Koresha Gemini AI", step2Desc: "GHAD AI itegura ubushobozi, ibikorwa by'abanyeshuri n'ibisubizo by'isuzuma.",
+    step3Title: "Koporora Wigishe", step3Desc: "Koporora gahunda y'isomo mu kanya gato winjire mu ishuri witeguye neza.",
+    ctaBannerTitle: "Witeguye Kunoza Imitegurire y'Amasomo Yawe?", ctaBannerSub: "Injira nonaha nta kiguzi cyangwa kwiyandikisha bigusabwa.",
     welcome: "Murakaza kuri GHAD AI", welcomeSub: "Umufasha wawe w'ubwenge mu kwigisha mu nteganyanyigisho y'u Rwanda ishingiye ku bushobozi.",
     cardLesson: "Kora Isomo na AI", cardLessonDesc: "Kora gahunda y'isomo yuzuye ihuye na REB mu masegonda.",
     cardAssistant: "Umufasha w'Umwarimu", cardAssistantDesc: "Baza ikibazo cyose cy'uburezi ubone inama z'umuhanga.",
@@ -48,7 +63,17 @@ const I18N = {
     generating: "Birakorwa...", errorPrefix: "Ikosa: ", copied: "Byakoporowe.", failedToCopy: "Ntibyakunze.", networkError: "Ikibazo cy'umurongo."
   },
   fr: {
-    brandTagline: "Planificateur", navDashboard: "Tableau de bord", navLesson: "Générateur de leçons", navAssistant: "Assistant pédagogique", navAssessment: "Générateur d'évaluations", navMethodology: "Méthodologies", navResources: "Ressources", navSettings: "Paramètres",
+    brandTagline: "Planificateur", navHome: "Accueil", navDashboard: "Tableau de bord", navLesson: "Générateur de leçons", navAssistant: "Assistant pédagogique", navAssessment: "Générateur d'évaluations", navMethodology: "Méthodologies", navResources: "Ressources", navSettings: "Paramètres",
+    navFeatures: "Fonctionnalités", navHow: "Comment ça marche", navCurriculum: "REB CBC", launchApp: "Ouvrir l'espace →",
+    heroHeadline: "Planifiez vos cours en 3D pour chaque classe au Rwanda.",
+    ctaCreateLesson: "✦ Créer une leçon", ctaExplore: "Explorer le tableau",
+    statLevels: "Primaire & Secondaire (P1–S6)", statAligned: "Aligné REB CBC",
+    eyebrowTools: "SUITE IA PÉDAGOGIQUE", featuresHeading: "Quatre outils 3D conçus pour les enseignants", featuresSub: "Cliquez sur une carte pour ouvrir directement l'outil dans votre espace GHAD AI.", openTool: "Lancer l'outil →",
+    eyebrowSteps: "MÉTHODE SIMPLE", howHeading: "Du sujet à la salle de classe en 3 étapes",
+    step1Title: "Choisissez la matière et la classe", step1Desc: "Sélectionnez de P1 à S6, la langue (Anglais, Kinyarwanda ou Français) et le sujet.",
+    step2Title: "Générez avec Gemini AI", step2Desc: "GHAD AI structure les compétences, activités des élèves et guides de correction.",
+    step3Title: "Copiez et enseignez", step3Desc: "Copiez votre plan en un clic et entrez en classe parfaitement préparé.",
+    ctaBannerTitle: "Prêt à transformer votre préparation de cours ?", ctaBannerSub: "Accédez immédiatement à l'espace interactif conçu pour les enseignants rwandais.",
     welcome: "Bienvenue sur GHAD AI", welcomeSub: "Votre compagnon pédagogique intelligent pour le curriculum du Rwanda.",
     cardLesson: "Générateur de leçons", cardLessonDesc: "Créez des plans de leçon en quelques secondes.",
     cardAssistant: "Assistant pédagogique", cardAssistantDesc: "Posez toute question éducative.",
@@ -91,16 +116,52 @@ function applyTheme() {
   else document.documentElement.setAttribute("data-theme", THEME);
 }
 
+function openWorkspace(viewId = "dashboard") {
+  $("#landingPage").style.display = "none";
+  $("#workspaceApp").style.display = "flex";
+  switchView(viewId);
+}
+
+function showLandingPage() {
+  $("#workspaceApp").style.display = "none";
+  $("#landingPage").style.display = "block";
+  closeSidebar();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 function switchView(viewId) {
   $$(".view").forEach((v) => v.classList.remove("active"));
   const target = document.getElementById("view-" + viewId);
   if (target) target.classList.add("active");
-  $$(".nav-btn").forEach((b) => b.classList.toggle("active", b.dataset.view === viewId));
+  $$(".nav-btn[data-view]").forEach((b) => b.classList.toggle("active", b.dataset.view === viewId));
   closeSidebar();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function closeSidebar() { $("#sidebar").classList.remove("open"); }
+
+function init3DTilt() {
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReduced) return;
+
+  $$("[data-tilt]").forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const rx = ((y / rect.height) - 0.5) * -10;
+      const ry = ((x / rect.width) - 0.5) * 10;
+
+      card.style.setProperty("--mx", `${(x / rect.width) * 100}%`);
+      card.style.setProperty("--my", `${(y / rect.height) * 100}%`);
+      card.style.transform = `perspective(1000px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg) translateY(-4px)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "";
+    });
+  });
+}
 
 function toast(message, type = "success") {
   const container = $("#toastContainer");
@@ -115,7 +176,7 @@ function toast(message, type = "success") {
 }
 
 async function copyText(text) {
-  try { await navigator.clipboard.writeText(text); toast(t("copied")); } 
+  try { await navigator.clipboard.writeText(text); toast(t("copied")); }
   catch { toast(t("failedToCopy"), "error"); }
 }
 
@@ -146,7 +207,7 @@ async function generateLesson() {
   try {
     const content = await callAPI("/api/lesson", payload);
     body.textContent = content; output.style.display = "block"; output.scrollIntoView({ behavior: "smooth", block: "start" });
-  } catch (err) { toast(t("errorPrefix") + err.message, "error"); } 
+  } catch (err) { toast(t("errorPrefix") + err.message, "error"); }
   finally { btn.disabled = false; btn.textContent = t("generateLesson"); }
 }
 
@@ -194,7 +255,7 @@ async function generateAssessment() {
   try {
     const content = await callAPI("/api/assessment", payload);
     body.textContent = content; output.style.display = "block"; output.scrollIntoView({ behavior: "smooth", block: "start" });
-  } catch (err) { toast(t("errorPrefix") + err.message, "error"); } 
+  } catch (err) { toast(t("errorPrefix") + err.message, "error"); }
   finally { btn.disabled = false; btn.textContent = t("generateAssessment"); }
 }
 
@@ -206,21 +267,46 @@ async function generateMethodology() {
   try {
     const content = await callAPI("/api/methodology", payload);
     body.textContent = content; output.style.display = "block"; output.scrollIntoView({ behavior: "smooth", block: "start" });
-  } catch (err) { toast(t("errorPrefix") + err.message, "error"); } 
+  } catch (err) { toast(t("errorPrefix") + err.message, "error"); }
   finally { btn.disabled = false; btn.textContent = t("generateMethodology"); }
 }
 
 function init() {
-  $("#langSelect").value = LANG; $("#settingsLang").value = LANG; $("#themeSelect").value = THEME; $("#settingsTheme").value = THEME;
-  
-  const updateLang = (e) => { LANG = e.target.value; localStorage.setItem("ghad_lang", LANG); $("#settingsLang").value = LANG; $("#langSelect").value = LANG; applyLanguage(); };
-  $("#langSelect").addEventListener("change", updateLang); $("#settingsLang").addEventListener("change", updateLang);
+  $("#langSelect").value = LANG;
+  $("#settingsLang").value = LANG;
+  $("#landingLangSelect").value = LANG;
+  $("#themeSelect").value = THEME;
+  $("#settingsTheme").value = THEME;
 
-  const updateTheme = (e) => { THEME = e.target.value; localStorage.setItem("ghad_theme", THEME); $("#settingsTheme").value = THEME; $("#themeSelect").value = THEME; applyTheme(); };
-  $("#themeSelect").addEventListener("change", updateTheme); $("#settingsTheme").addEventListener("change", updateTheme);
+  const updateLang = (e) => {
+    LANG = e.target.value;
+    localStorage.setItem("ghad_lang", LANG);
+    $("#settingsLang").value = LANG;
+    $("#langSelect").value = LANG;
+    $("#landingLangSelect").value = LANG;
+    applyLanguage();
+  };
+  $("#langSelect").addEventListener("change", updateLang);
+  $("#settingsLang").addEventListener("change", updateLang);
+  $("#landingLangSelect").addEventListener("change", updateLang);
+
+  const updateTheme = (e) => {
+    THEME = e.target.value;
+    localStorage.setItem("ghad_theme", THEME);
+    $("#settingsTheme").value = THEME;
+    $("#themeSelect").value = THEME;
+    applyTheme();
+  };
+  $("#themeSelect").addEventListener("change", updateTheme);
+  $("#settingsTheme").addEventListener("change", updateTheme);
+
+  $$("[data-launch]").forEach((el) => {
+    el.addEventListener("click", () => openWorkspace(el.dataset.launch));
+  });
+  $("#backToHomeBtn").addEventListener("click", showLandingPage);
 
   $("#menuToggle").addEventListener("click", () => $("#sidebar").classList.toggle("open"));
-  $$(".nav-btn").forEach((btn) => btn.addEventListener("click", () => switchView(btn.dataset.view)));
+  $$(".nav-btn[data-view]").forEach((btn) => btn.addEventListener("click", () => switchView(btn.dataset.view)));
   $$(".feature-card").forEach((card) => card.addEventListener("click", () => switchView(card.dataset.view)));
 
   $("#generateLesson").addEventListener("click", generateLesson);
@@ -237,7 +323,9 @@ function init() {
     if (window.innerWidth <= 860 && sidebar.classList.contains("open") && !sidebar.contains(e.target) && !toggle.contains(e.target)) closeSidebar();
   });
 
-  applyLanguage(); applyTheme();
+  applyLanguage();
+  applyTheme();
+  init3DTilt();
 }
 
 init();
