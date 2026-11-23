@@ -10,26 +10,37 @@ const DOT = '.....................';
 /* ================= TRANSLATIONS (EN | RW | FR) ================= */
 const D = {}; const IX = { rw: 0, fr: 1 }; let LG = 'en';
 try { LG = localStorage.getItem('ghad_lang') || 'en'; } catch (_) {}
-String.raw`Lesson Planner|Umugenga w'Isomo|Planificateur de leçons
-AI Assistant|Umufasha wa AI|Assistant IA
-Assessment|Ibipimo|Évaluation
-Methodology|Uburyo|Méthodologie
-My Plans|Ibipimo byanjye|Mes plans
-Settings|Igenamiterere|Paramètres
-Competence-Based Curriculum · REB format|Integanyanyigisho ishingiye ku bushobozi · Uburyo bwa REB|Curriculum par compétences · Format REB
+String.raw`Competence-Based Curriculum · REB format|Integanyanyigisho ishingiye ku bushobozi · Uburyo bwa REB|Curriculum par compétences · Format REB
+✦ Official REB CBC format · 3 languages|✦ Uburyo bwa REB CBC · Indimi eshatu|✦ Format officiel REB CBC · 3 langues
 Plan your lesson in minutes|Tegura isomo ryawe mu minota mike|Préparez votre leçon en quelques minutes
-AI-powered: fill in a few details, and the AI writes your full REB competence-based lesson plan. Edit, save and print.|Ifashishijwe AI: uzuza amakuru make, AI ayandika yose umwanzuro w'isomo uhuza na REB. Hindura, bika, sohora.|Propulsé par l'IA : remplissez quelques détails, l'IA rédige votre plan REB complet. Modifiez, enregistrez, imprimez.
+with the power of AI|ufite imbarutso ya AI|avec la puissance de l'IA
+Fill in a few details — subject, class and topic — and the AI writes your complete competence-based lesson plan, ready to edit, save and print.|Uzuza amakuru make — isomo, icyiciro n'insanganyamatsiko — AI ikandika umwanzuro wawe wuzuye w'isomo, witeguye guhindurwa, kubikwa no gusohora.|Remplissez quelques détails — matière, classe et sujet — et l'IA rédige votre plan de leçon complet, prêt à modifier, enregistrer et imprimer.
 1 · Fill in a few lesson details|1 · Uzuza amakuru make y'isomo|1 · Remplissez quelques détails
 2 · Press Generate — the AI writes everything|2 · Kanda Kora — AI yandika byose|2 · Appuyez sur Générer — l'IA rédige tout
 3 · Edit, save and print|3 · Hindura, bika kandi usohore|3 · Modifiez, enregistrez et imprimez
 ✨ Start a lesson plan|✨ Tangira gutegura isomo|✨ Commencer un plan de leçon
 💬 Ask the AI assistant|💬 Baza umufasha wa AI|💬 Demander à l'assistant IA
+Languages|Indimi|Langues
+All Levels|Amashuri yose|Tous niveaux
+Free for teachers|Ku bwarimu ni ubuntu|Gratuit pour les enseignants
+Lesson Planner|Umugenga w'Isomo|Planificateur de leçons
+AI Assistant|Umufasha wa AI|Assistant IA
+Assessment|Ibipimo|Évaluation
+Methodology|Uburyo|Méthodologie
+My Plans|Ibipimo byanjye|Mes plans
+Settings|Igenamiterere|Paramètres
 AI writes the full REB CBC plan table.|AI yandika imbonerahamwe yuzuye ya REB CBC.|L'IA rédige le tableau REB CBC complet.
 Ask anything, with saved chat history.|Baza icyo aricyo cyose, ibiganiro bibikwa.|Posez vos questions, l'historique est enregistré.
 Generate quizzes and test items.|Kora ibibazo by'ibipimo.|Générez des quiz et des questions.
 Learner-centred teaching strategies.|Uburyo bw'igishirwa ku banyeshuri.|Stratégies centrées sur l'apprenant.
+Open →|Fungura →|Ouvrir →
+Built for Rwandan schools|Byakorewe amashuri y'u Rwanda|Conçu pour les écoles rwandaises
+Official REB CBC format|Uburyo nyarwanda wa REB CBC|Format officiel REB CBC
+3 languages, one click|Indimi eshatu, kanda rimwe|3 langues, un clic
+Your data stays yours|Amakuru yawe aguma ari yawe|Vos données restent les vôtres
+Made for teachers. Your saved plans stay on this device.|Byakozwe ku bw'abarimu. Imbonerahamwe wabitse zigumana kuri iki gikoresho.|Conçu pour les enseignants. Vos plans enregistrés restent sur cet appareil.
 ← Home|← Ahabanza|← Accueil
-✏️ Just a few things — the AI completes the rest|✏️ Ibintu bike gusa — AI iranga ibindi|✏️ Quelques éléments — l'IA complète le reste
+✏️ Just a few things — the AI completes the rest|✏️ Ibintu bike gusa — AI irarangiza|✏️ Quelques éléments — l'IA complète le reste
 Optional — leave empty and the AI fills it in|Ibyihariye — reka ubusa AI abikwize|Optionnel — laissez vide, l'IA le remplira
 School name|Izina ry'ishuri|Nom de l'école
 Teacher's name|Izina ry'umwarimu|Nom de l'enseignant
@@ -46,8 +57,10 @@ Title of the lesson (or unit topic)|Insanganyamatsiko y'isomo (cyangwa umutwe)|T
 Special Educational Needs (type and number of learners)|Ibyifuzo byihariye mu myigire (ubwoko n'umubare w'abanyeshuri)|Besoins éducatifs spéciaux (type et nombre d'apprenants)
 Learning materials (comma separated)|Ibikoresho by'isomo (utandukanyije n'akabago)|Matériel d'apprentissage (séparé par des virgules)
 Extra instructions for the AI (optional)|Amabwiriza ayongera kuri AI (bitari ngombwa)|Instructions supplémentaires pour l'IA (optionnel)
+Type subject|Andika isomo|Saisir la matière
 ✨ Generate lesson plan|✨ Kora imbonerahamwe y'isomo|✨ Générer le plan de leçon
 New blank plan|Imbonerahamwe nshya|Nouveau plan vierge
+Lesson plan|Umwanzuro w'isomo|Plan de leçon
 💾 Save plan|💾 Bika|💾 Enregistrer
 🖨️ Print / Save PDF|🖨️ Sohora / Bika PDF|🖨️ Imprimer / Enregistrer en PDF
 Top|Hejuru|Haut
@@ -59,16 +72,23 @@ Type your question…|Andika ikibazo cyawe…|Tapez votre question…
 Send|Ohereza|Envoyer
 Questions|Ibibazo|Questions
 Difficulty|Ikomeye|Difficulté
+Easy|Byoroshye|Facile
+Medium|Hagati|Moyen
+Hard|Bikomeye|Difficile
 Type|Ubwoko|Type
+Multiple Choice|Hitamo Igisubizo|Choix Multiple
+Short Answer|Igisubizo Gike|Réponse Courte
+Mixed|Cyavuyemo|Mixte
 ✨ Generate Assessment|✨ Kora Ikipimo|✨ Générer l'Évaluation
 ✨ Generate Methodology|✨ Kora Uburyo|✨ Générer la Méthodologie
+Assessment|Ibipimo|Évaluation
+Methodology|Uburyo|Méthodologie
 📋 Copy|📋 Koporora|📋 Copier
 My lesson plans|Imbonerahamwe z'amasomo yanjye|Mes plans de leçon
 Plans are saved in this browser on this device.|Imbonerahamwe zibikwa muri iyi browser kuri iki gikoresho.|Les plans sont enregistrés dans ce navigateur sur cet appareil.
 Language|Ururimi|Langue
 Theme|Imiterere|Thème
 🗑️ Delete all saved plans & chats|🗑️ Siba ibipimo byose n'ibiganiro|🗑️ Supprimer tous les plans et discussions
-Made for teachers. Your saved plans stay on this device.|Byakozwe ku bw'abarimu. Imbonerahamwe wabitse zigumana kuri iki gikoresho.|Conçu pour les enseignants. Vos plans enregistrés restent sur cet appareil.
 Open|Fungura|Ouvrir
 Delete|Siba|Supprimer
 No saved plans yet.|Nta mbonerahamwe irabikwa.|Aucun plan enregistré.
@@ -79,6 +99,10 @@ Note: the steps total {0} min but the lesson duration is {1} min.|Icyitonderwa: 
 LESSON PLAN|IMBONERAHAMWE Y'ISOMO|PLAN DE LEÇON
 School Name:|Izina ry'ishuri:|Nom de l'école :
 Teacher's name:|Izina ry'umwarimu:|Nom de l'enseignant :
+Term|Igihembwe|Trimestre
+Date|Itariki|Date
+Subject|Isomo|Matière
+Class|Umwaka|Classe
 Unit N°|Umutwe No|Unité N°
 Lesson N°|Isomo No|Leçon N°
 Duration / Class size|Igihe / Umubare w'abanyeshuri|Durée / Effectif
@@ -86,6 +110,7 @@ Duration / Class size|Igihe / Umubare w'abanyeshuri|Durée / Effectif
 {0} min|iminota {0}|{0} min
 Type of special educational needs to be catered for in this lesson and numbers of learners in each category|Ubwoko bw'ibyifuzo byihariye bizitabwaho muri iri somo n'umubare w'abanyeshuri muri buri cyiciro|Types de besoins éducatifs spéciaux pris en compte dans cette leçon et nombre d'apprenants par catégorie
 Accommodation:|Uko bazafashwa:|Adaptation :
+Unit title|Umutwe|Titre de l'unité
 Key unit competence|Ubushobozi shingiro bw'umutwe|Compétence clé de l'unité
 Title of the lesson|Insanganyamatsiko y'isomo|Titre de la leçon
 Instructional objectives|Intego z'isomo|Objectifs pédagogiques
@@ -104,6 +129,7 @@ Teacher's self-evaluation|Isuzuma ry'umwarimu ku isomo|Auto-évaluation de l'ens
 {0}, {1} will be able to {2} {3} {4}.|{0}, {1} bazashobora {2} {3} {4}.|{0}, {1} seront capables de {2} {3} {4}.
 Techniques: {0}. Resources: {1}. Learners work in small groups. Location: {2}.|Uburyo: {0}. Ibikoresho: {1}. Abanyeshuri bakorera mu matsinda mato. Aho bizabera: {2}.|Techniques : {0}. Ressources : {1}. Les apprenants travaillent en petits groupes. Lieu : {2}.
 learners|abanyeshuri|les apprenants
+the lesson|isomo|la leçon
 Inside|Mu ishuri|À l'intérieur
 Outside|Hanze|À l'extérieur
 Copied!|Byakopiwe!|Copié !
@@ -121,16 +147,9 @@ Chat history deleted.|Amateka y'ibiganiro yasibwe.|Historique supprimé.
 All saved data deleted.|Amakuru yose yabitswe yasibwe.|Toutes les données supprimées.
 Delete all saved plans and chats?|Siba ibipimo byose n'ibiganiro byabitswe ?|Supprimer tous les plans et discussions enregistrés ?
 Delete chat history?|Siba amateka y'ibiganiro ?|Supprimer l'historique des discussions ?
+Plan saved.|Umwanzuro wabitswe.|Plan enregistré.
 The AI is writing your lesson plan…|AI irandika umwanzuro w'isomo ryawe…|L'IA rédige votre plan de leçon…
-Assessment|Ibipimo|Évaluation
-Methodology|Uburyo|Méthodologie
-Topic|Insanganyamatsiko|Sujet
-Easy|Byoroshye|Facile
-Medium|Hagati|Moyen
-Hard|Bikomeye|Difficile
-Multiple Choice|Hitamo Igisubizo|Choix Multiple
-Short Answer|Igisubizo Gike|Réponse Courte
-Mixed|Cyavuyemo|Mixte
+Plan generated with default content (AI unreachable).|Umwanzuro wakozwe n'ibikubiyemo bisanzwe (AI ntiyagera).|Plan généré avec le contenu par défaut (IA inaccessible).
 Pupil's Book, teacher's guide, REB syllabus|Igitabo cy'umunyeshuri, igitabo cy'umwarimu, integanyanyigisho ya REB|Livre de l'élève, guide de l'enseignant, programme REB`.split('\n').forEach((l) => {
   const p = l.split('|');
   if (p.length === 3) { const f = (x) => x.trim().replace(/\\n/g, '\n'); D[f(p[0])] = [f(p[1]), f(p[2])]; }
@@ -141,12 +160,12 @@ const t = (s, ...a) => {
   return r.replace(/\{(\d)\}/g, (m, k) => a[k] === undefined ? '' : a[k]);
 };
 
-/* ================= i18n apply (static UI, attribute-based) ================= */
+/* ================= i18n apply (data-i18n holds the EN key) ================= */
 function applyLang() {
   document.documentElement.lang = LG;
   $$('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
-    if (D[key]) el.textContent = LG === 'en' ? key : t(key); else el.textContent = key;
+    el.textContent = LG === 'en' ? key : (D[key] ? t(key) : key);
   });
   $$('[data-i18n-ph]').forEach((el) => {
     const key = el.getAttribute('data-i18n-ph');
@@ -176,8 +195,8 @@ function setTheme(v) {
   else document.documentElement.setAttribute('data-theme', v);
   ['theme', 'themeSet'].forEach((id) => { const s = $(id); if (s) s.value = v; });
 }
-['lang', 'langWs', 'langSet'].forEach((id) => safe($(id), (el) => el.addEventListener('change', () => setLang(el.value)))));
-['theme', 'themeSet'].forEach((id) => safe($(id), (el) => el.addEventListener('change', () => setTheme(el.value)))));
+['lang', 'langWs', 'langSet'].forEach((id) => safe($(id), (el) => el.addEventListener('change', () => setLang(el.value))));
+['theme', 'themeSet'].forEach((id) => safe($(id), (el) => el.addEventListener('change', () => setTheme(el.value))));
 
 /* ================= Views ================= */
 const VIEWS = ['lesson', 'assistant', 'assessment', 'methodology', 'library', 'settings'];
@@ -351,7 +370,7 @@ function savePlan() {
   const all = getAll(), f = {}; fields().forEach((x) => { f[x.id] = x.value; });
   const r = { id: cur || String(Date.now()), title: $('ltitle').value || '-', subject: subjRaw(), cls: $('cls').value || '-', upd: new Date().toLocaleDateString(), f, plan: $('plan').innerHTML };
   const k = all.findIndex((p) => p.id === r.id); if (k >= 0) all[k] = r; else all.unshift(r); cur = r.id;
-  if (!putAll(all)) toast(t('Could not save in this browser.'), 'error'); else toast('💾 ✓', 'success');
+  if (!putAll(all)) toast(t('Could not save in this browser.'), 'error'); else toast(t('Plan saved.'), 'success');
   renderLib();
 }
 function loadPlan(id) {
@@ -397,7 +416,7 @@ safe($('genBtn'), (btn) => btn.addEventListener('click', async () => {
     toast(t('Lesson plan generated'), 'success');
   } catch (err) {
     buildPlan(f, parseAI(''));
-    toast(t('Failed: network error') + ' — ' + t('Lesson plan generated') + ' (default)', 'error');
+    toast(t('Plan generated with default content (AI unreachable).'), 'error');
   } finally { busy(btn, false); }
 }));
 safe($('saveBtn'), (el) => el.addEventListener('click', savePlan));
