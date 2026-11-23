@@ -18,21 +18,19 @@ My Plans|Ibipimo byanjye|Mes plans
 Settings|Igenamiterere|Paramètres
 Competence-Based Curriculum · REB format|Integanyanyigisho ishingiye ku bushobozi · Uburyo bwa REB|Curriculum par compétences · Format REB
 Plan your lesson in minutes|Tegura isomo ryawe mu minota mike|Préparez votre leçon en quelques minutes
-AI-powered, for every teacher in our school, all subjects, in the official REB lesson plan format.|Byifashishijwe AI, kuri buri mwarimu wo mu ishuri ryacu, mu masomo yose, mu buryo bwa REB bwo gutegura isomo.|Propulsé par l'IA, pour tous les enseignants de notre école, toutes matières, au format officiel REB.
-1 · Fill in the lesson details|1 · Uzuza amakuru y'isomo|1 · Remplissez les détails de la leçon
-2 · Press Generate — the AI writes the plan|2 · Kanda Kora — AI yandika umwanzuro|2 · Appuyez sur Générer — l'IA rédige le plan
+AI-powered: fill in a few details, and the AI writes your full REB competence-based lesson plan. Edit, save and print.|Ifashishijwe AI: uzuza amakuru make, AI ayandika yose umwanzuro w'isomo uhuza na REB. Hindura, bika, sohora.|Propulsé par l'IA : remplissez quelques détails, l'IA rédige votre plan REB complet. Modifiez, enregistrez, imprimez.
+1 · Fill in a few lesson details|1 · Uzuza amakuru make y'isomo|1 · Remplissez quelques détails
+2 · Press Generate — the AI writes everything|2 · Kanda Kora — AI yandika byose|2 · Appuyez sur Générer — l'IA rédige tout
 3 · Edit, save and print|3 · Hindura, bika kandi usohore|3 · Modifiez, enregistrez et imprimez
 ✨ Start a lesson plan|✨ Tangira gutegura isomo|✨ Commencer un plan de leçon
 💬 Ask the AI assistant|💬 Baza umufasha wa AI|💬 Demander à l'assistant IA
-Lesson Planner|Umugenga w'Isomo|Planificateur de leçons
 AI writes the full REB CBC plan table.|AI yandika imbonerahamwe yuzuye ya REB CBC.|L'IA rédige le tableau REB CBC complet.
 Ask anything, with saved chat history.|Baza icyo aricyo cyose, ibiganiro bibikwa.|Posez vos questions, l'historique est enregistré.
 Generate quizzes and test items.|Kora ibibazo by'ibipimo.|Générez des quiz et des questions.
 Learner-centred teaching strategies.|Uburyo bw'igishirwa ku banyeshuri.|Stratégies centrées sur l'apprenant.
 ← Home|← Ahabanza|← Accueil
-🏫 Identification|🏫 Imyirondoro|🏫 Identification
-📚 Curriculum and objective|📚 Integanyanyigisho n'intego|📚 Programme et objectif
-🎯 Delivery|🎯 Uko isomo rizatangwa|🎯 Déroulement
+✏️ Just a few things — the AI completes the rest|✏️ Ibintu bike gusa — AI iranga ibindi|✏️ Quelques éléments — l'IA complète le reste
+Optional — leave empty and the AI fills it in|Ibyihariye — reka ubusa AI abikwize|Optionnel — laissez vide, l'IA le remplira
 School name|Izina ry'ishuri|Nom de l'école
 Teacher's name|Izina ry'umwarimu|Nom de l'enseignant
 Term|Igihembwe|Trimestre
@@ -43,29 +41,17 @@ Unit No|Umutwe No|Unité N°
 Lesson No (e.g. 2 of 5)|Isomo No (urugero 2 kuri 5)|Leçon N° (ex. 2 sur 5)
 Duration (min)|Igihe (iminota)|Durée (min)
 Class size|Umubare w'abanyeshuri|Effectif de la classe
-Minutes for each step (leave empty to let the AI/app divide them).|Iminota ya buri gika (reka ubusa AI/porogaramu ikagabanye).|Minutes de chaque étape (laissez vide pour un partage automatique).
-Introduction (min)|Intangiriro (iminota)|Introduction (min)
-Development (min)|Iterambere (iminota)|Développement (min)
-Conclusion (min)|Umusozo (iminota)|Conclusion (min)
-Special Educational Needs (type and number of learners)|Ibyifuzo byihariye mu myigire (ubwoko n'umubare w'abanyeshuri)|Besoins éducatifs spéciaux (type et nombre d'apprenants)
-SEN: how these learners will be accommodated|Uko abo banyeshuri bazafashwa|BES : comment ces apprenants seront accompagnés
 Unit title|Umutwe|Titre de l'unité
-Title of the lesson|Insanganyamatsiko y'isomo|Titre de la leçon
-Instructional objective — leave empty and the AI will write it (condition, who, action, content, standard).|Intego y'isomo — reka ubusa AI ayandike (imimerere, uwo bireba, igikorwa, ibikubiyemo, igipimo).|Objectif pédagogique — laissez vide et l'IA le rédigera (condition, qui, action, contenu, critère).
-1. Condition|1. Imimerere|1. Condition
-3. Action (verb)|3. Igikorwa (inshinga)|3. Action (verbe)
-4. Content|4. Ibikubiyemo|4. Contenu
-5. Standard|5. Igipimo|5. Critère
-Plan for this class|Aho isomo rizabera|Lieu de la classe
+Title of the lesson (or unit topic)|Insanganyamatsiko y'isomo (cyangwa umutwe)|Titre de la leçon (ou sujet)
+Special Educational Needs (type and number of learners)|Ibyifuzo byihariye mu myigire (ubwoko n'umubare w'abanyeshuri)|Besoins éducatifs spéciaux (type et nombre d'apprenants)
 Learning materials (comma separated)|Ibikoresho by'isomo (utandukanyije n'akabago)|Matériel d'apprentissage (séparé par des virgules)
-References|Ibitabo n'ibindi byifashishijwe|Références
-✨ Leave Introduction / Development / Conclusion empty and the AI will write all teacher and learner activities for you. Anything you type yourself is kept.|✨ Reka Intangiriro / Iterambere / Umusozo ubusa AI aguhe ibikorwa by'umwarimu n'abanyeshuri. Icyo wanditse wewe kirabikwa.|✨ Laissez Introduction / Développement / Conclusion vides et l'IA rédigera les activités. Ce que vous tapez est conservé.
+Extra instructions for the AI (optional)|Amabwiriza ayongera kuri AI (bitari ngombwa)|Instructions supplémentaires pour l'IA (optionnel)
 ✨ Generate lesson plan|✨ Kora imbonerahamwe y'isomo|✨ Générer le plan de leçon
 New blank plan|Imbonerahamwe nshya|Nouveau plan vierge
 💾 Save plan|💾 Bika|💾 Enregistrer
 🖨️ Print / Save PDF|🖨️ Sohora / Bika PDF|🖨️ Imprimer / Enregistrer en PDF
 Top|Hejuru|Haut
-Tip: tap any box in the plan to edit it, including the minutes.|Inama: kanda ahantu hose mu mbonerahamwe kugira ngo uhahindure, harimo n'iminota.|Astuce : touchez une case du plan pour la modifier, y compris les minutes.
+Tip: tap any box in the plan to edit it. Dotted spaces are for you to fill in (school, teacher, date…).|Inama: kanda ahantu hose mu mbonerahamwe kuhindura. Aho toherejwe n'ibyuzamo (ishuri, umwarimu, itariki…).|Astuce : touchez une case pour la modifier. Les pointillés sont à remplir (école, enseignant, date…).
 ➕ New chat|➕ Ikiganiro gishya|➕ Nouvelle discussion
 🗑️ Delete history|🗑️ Siba amateka|🗑️ Supprimer l'historique
 Your chats are saved on this device.|Ibiganiro byawe bibikwa kuri iki gikoresho.|Vos discussions sont enregistrées sur cet appareil.
@@ -73,17 +59,9 @@ Type your question…|Andika ikibazo cyawe…|Tapez votre question…
 Send|Ohereza|Envoyer
 Questions|Ibibazo|Questions
 Difficulty|Ikomeye|Difficulté
-Easy|Byoroshye|Facile
-Medium|Hagati|Moyen
-Hard|Bikomeye|Difficile
 Type|Ubwoko|Type
-Multiple Choice|Hitamo Igisubizo|Choix Multiple
-Short Answer|Igisubizo Gike|Réponse Courte
-Mixed|Cyavuyemo|Mixte
 ✨ Generate Assessment|✨ Kora Ikipimo|✨ Générer l'Évaluation
 ✨ Generate Methodology|✨ Kora Uburyo|✨ Générer la Méthodologie
-Assessment|Ibipimo|Évaluation
-Methodology|Uburyo|Méthodologie
 📋 Copy|📋 Koporora|📋 Copier
 My lesson plans|Imbonerahamwe z'amasomo yanjye|Mes plans de leçon
 Plans are saved in this browser on this device.|Imbonerahamwe zibikwa muri iyi browser kuri iki gikoresho.|Les plans sont enregistrés dans ce navigateur sur cet appareil.
@@ -101,10 +79,6 @@ Note: the steps total {0} min but the lesson duration is {1} min.|Icyitonderwa: 
 LESSON PLAN|IMBONERAHAMWE Y'ISOMO|PLAN DE LEÇON
 School Name:|Izina ry'ishuri:|Nom de l'école :
 Teacher's name:|Izina ry'umwarimu:|Nom de l'enseignant :
-Term|Igihembwe|Trimestre
-Date|Itariki|Date
-Subject|Isomo|Matière
-Class|Umwaka|Classe
 Unit N°|Umutwe No|Unité N°
 Lesson N°|Isomo No|Leçon N°
 Duration / Class size|Igihe / Umubare w'abanyeshuri|Durée / Effectif
@@ -112,12 +86,12 @@ Duration / Class size|Igihe / Umubare w'abanyeshuri|Durée / Effectif
 {0} min|iminota {0}|{0} min
 Type of special educational needs to be catered for in this lesson and numbers of learners in each category|Ubwoko bw'ibyifuzo byihariye bizitabwaho muri iri somo n'umubare w'abanyeshuri muri buri cyiciro|Types de besoins éducatifs spéciaux pris en compte dans cette leçon et nombre d'apprenants par catégorie
 Accommodation:|Uko bazafashwa:|Adaptation :
-Unit title|Umutwe|Titre de l'unité
 Key unit competence|Ubushobozi shingiro bw'umutwe|Compétence clé de l'unité
 Title of the lesson|Insanganyamatsiko y'isomo|Titre de la leçon
 Instructional objectives|Intego z'isomo|Objectifs pédagogiques
 Plan of this class (location: in / outside)|Aho isomo rizabera (mu ishuri / hanze)|Lieu de la classe (à l'intérieur / à l'extérieur)
 Learning materials (for all learners)|Ibikoresho by'isomo (ku banyeshuri bose)|Matériel d'apprentissage (pour tous les apprenants)
+References|Ibitabo n'ibindi byifashishijwe|Références
 Timing for each step|Igihe cya buri gika|Durée de chaque étape
 Description of teaching and learning activities|Ibisobanuro by'ibikorwa byo kwigisha no kwiga|Description des activités d'enseignement et d'apprentissage
 Generic competence and cross-cutting issues to be addressed + a short explanation|Ubushobozi rusange n'ingingo zambukiranya amasomo zigomba kwitabwaho + ibisobanuro bigufi|Compétences génériques et thèmes transversaux à développer + une brève explication
@@ -129,9 +103,7 @@ Conclusion|Umusozo|Conclusion
 Teacher's self-evaluation|Isuzuma ry'umwarimu ku isomo|Auto-évaluation de l'enseignant
 {0}, {1} will be able to {2} {3} {4}.|{0}, {1} bazashobora {2} {3} {4}.|{0}, {1} seront capables de {2} {3} {4}.
 Techniques: {0}. Resources: {1}. Learners work in small groups. Location: {2}.|Uburyo: {0}. Ibikoresho: {1}. Abanyeshuri bakorera mu matsinda mato. Aho bizabera: {2}.|Techniques : {0}. Ressources : {1}. Les apprenants travaillent en petits groupes. Lieu : {2}.
-group discussion, questions and answers, demonstration|ikiganiro mu matsinda, ibibazo n'ibisubizo, kwerekana|discussion en groupe, questions-réponses, démonstration
 learners|abanyeshuri|les apprenants
-the lesson|isomo|la leçon
 Inside|Mu ishuri|À l'intérieur
 Outside|Hanze|À l'extérieur
 Copied!|Byakopiwe!|Copié !
@@ -148,7 +120,18 @@ New chat started.|Ikiganiro gishya gitangiye.|Nouvelle discussion commencée.
 Chat history deleted.|Amateka y'ibiganiro yasibwe.|Historique supprimé.
 All saved data deleted.|Amakuru yose yabitswe yasibwe.|Toutes les données supprimées.
 Delete all saved plans and chats?|Siba ibipimo byose n'ibiganiro byabitswe ?|Supprimer tous les plans et discussions enregistrés ?
-The AI is writing your lesson plan…|AI irandika umwanzuro w'isomo ryawe…|L'IA rédige votre plan de leçon…`.split('\n').forEach(l => {
+Delete chat history?|Siba amateka y'ibiganiro ?|Supprimer l'historique des discussions ?
+The AI is writing your lesson plan…|AI irandika umwanzuro w'isomo ryawe…|L'IA rédige votre plan de leçon…
+Assessment|Ibipimo|Évaluation
+Methodology|Uburyo|Méthodologie
+Topic|Insanganyamatsiko|Sujet
+Easy|Byoroshye|Facile
+Medium|Hagati|Moyen
+Hard|Bikomeye|Difficile
+Multiple Choice|Hitamo Igisubizo|Choix Multiple
+Short Answer|Igisubizo Gike|Réponse Courte
+Mixed|Cyavuyemo|Mixte
+Pupil's Book, teacher's guide, REB syllabus|Igitabo cy'umunyeshuri, igitabo cy'umwarimu, integanyanyigisho ya REB|Livre de l'élève, guide de l'enseignant, programme REB`.split('\n').forEach((l) => {
   const p = l.split('|');
   if (p.length === 3) { const f = (x) => x.trim().replace(/\\n/g, '\n'); D[f(p[0])] = [f(p[1]), f(p[2])]; }
 });
@@ -158,18 +141,16 @@ const t = (s, ...a) => {
   return r.replace(/\{(\d)\}/g, (m, k) => a[k] === undefined ? '' : a[k]);
 };
 
-/* ================= i18n apply (static UI) ================= */
+/* ================= i18n apply (static UI, attribute-based) ================= */
 function applyLang() {
   document.documentElement.lang = LG;
   $$('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
-    if (el.__o === undefined) el.__o = el.textContent;
-    if (D[el.__o]) el.textContent = LG === 'en' ? el.__o : t(el.__o);
-    else el.textContent = el.__o;
+    if (D[key]) el.textContent = LG === 'en' ? key : t(key); else el.textContent = key;
   });
   $$('[data-i18n-ph]').forEach((el) => {
-    if (el.__p === undefined) el.__p = el.placeholder;
-    el.placeholder = LG === 'en' ? el.__p : (D[el.__p] ? t(el.__p) : el.__p);
+    const key = el.getAttribute('data-i18n-ph');
+    el.placeholder = LG === 'en' ? key : (D[key] ? t(key) : key);
   });
 }
 
@@ -195,8 +176,8 @@ function setTheme(v) {
   else document.documentElement.setAttribute('data-theme', v);
   ['theme', 'themeSet'].forEach((id) => { const s = $(id); if (s) s.value = v; });
 }
-['lang', 'langWs', 'langSet'].forEach((id) => safe($(id), (el) => el.addEventListener('change', () => setLang(el.value))));
-['theme', 'themeSet'].forEach((id) => safe($(id), (el) => el.addEventListener('change', () => setTheme(el.value))));
+['lang', 'langWs', 'langSet'].forEach((id) => safe($(id), (el) => el.addEventListener('change', () => setLang(el.value)))));
+['theme', 'themeSet'].forEach((id) => safe($(id), (el) => el.addEventListener('change', () => setTheme(el.value)))));
 
 /* ================= Views ================= */
 const VIEWS = ['lesson', 'assistant', 'assessment', 'methodology', 'library', 'settings'];
@@ -220,9 +201,6 @@ function showView(name) {
 $$('[data-launch]').forEach((el) => el.addEventListener('click', () => openWorkspace(el.getAttribute('data-launch'))));
 $$('.tab[data-view]').forEach((el) => el.addEventListener('click', () => showView(el.getAttribute('data-view'))));
 safe($('backToHomeBtn'), (el) => el.addEventListener('click', goHome));
-safe($('menuToggle'), (el) => el.addEventListener('click', () => {
-  const tabs = $('tabs'); if (tabs) tabs.scrollIntoView({ behavior: 'smooth' });
-}));
 
 /* ================= 3D tilt ================= */
 if (!window.matchMedia('(hover: none)').matches) {
@@ -250,31 +228,29 @@ function fbCopy(text, done) {
   } catch (_) { toast(t('Copy failed — please copy manually'), 'error'); }
 }
 
-/* ================= API ================= */
+/* ================= API (connect your AI here) ================= */
 async function postJSON(url, payload) {
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
   if (!res.ok) throw new Error('Server error (' + res.status + ')');
   const data = await res.json();
   if (typeof data === 'string') return data;
-  return data.output || data.result || data.text || data.message || data.content || data.lesson || data.assessment || data.methodology || data.reply || data.answer || JSON.stringify(data, null, 2);
+  return data.output || data.result || data.text || data.message || data.content || data.reply || data.answer || JSON.stringify(data, null, 2);
 }
 
-/* ================= Subject helpers (from your pasted code) ================= */
+/* ================= Subject helpers ================= */
 const PRE = { 'English': 'role play, pair work, songs and games, questions and answers', 'Kinyarwanda': 'role play, pair work, storytelling, questions and answers', 'Kiswahili': 'role play, pair work, songs, questions and answers', 'French': 'role play, pair work, songs, questions and answers', 'Mathematics': 'problem solving, demonstration, group work, questions and answers', 'Science and Elementary Technology': 'observation, practical work, group work, questions and answers', 'Creative Arts': 'observation, practical work, group work, questions and answers', 'Physical Education': 'observation, practical work, group work, questions and answers', 'Religious Education': 'storytelling, group discussion, questions and answers' };
 const DEF_TECH = 'group discussion, questions and answers, demonstration';
 const subjRaw = () => $('subject').value === 'Other' ? ($('subjo').value || 'Other') : $('subject').value;
 const subjT = () => t(subjRaw());
 safe($('subject'), (el) => el.addEventListener('change', () => { $('subjo').style.display = el.value === 'Other' ? 'block' : 'none'; }));
-const cat = () => { const v = $('subject').value; return v === 'Mathematics' ? 'm' : ['English', 'Kinyarwanda', 'Kiswahili', 'French'].includes(v) ? 'l' : ['Science and Elementary Technology', 'Creative Arts', 'Physical Education'].includes(v) ? 's' : 'g'; };
 
 function sp(tot, w) { const r = []; let u = 0; const sw = w.reduce((x, y) => x + y, 0); w.forEach((x, k) => { const m = k === w.length - 1 ? tot - u : Math.max(1, Math.round(tot * x / sw)); r.push(m); u += m; }); return r; }
 const L = (arr, m) => arr.map((x, k) => (m && m[k] ? t('{0} min', m[k]) + '\n' : '') + (k + 1) + '. ' + x).join('\n');
 
-/* ================= AI prompt & parser ================= */
-const MARKERS = ['OBJECTIVE', 'KUC', 'INTRO_TEACHER', 'INTRO_LEARNERS', 'DEV_TEACHER', 'DEV_LEARNERS', 'ASSESSMENT', 'SUMMARY', 'ASSIGNMENT', 'GENERIC_INTRO', 'GENERIC_DEV', 'GENERIC_CONCL', 'TECHNIQUES'];
+/* ================= AI prompt + parser (markers) ================= */
+const MARKERS = ['KUC', 'OBJECTIVE', 'INTRO_TEACHER', 'INTRO_LEARNERS', 'DEV_TEACHER', 'DEV_LEARNERS', 'ASSESSMENT', 'SUMMARY', 'ASSIGNMENT', 'GENERIC_INTRO', 'GENERIC_DEV', 'GENERIC_CONCL', 'TECHNIQUES'];
 function parseAI(text) {
-  const out = {};
-  MARKERS.forEach((m) => { out[m] = ''; });
+  const out = {}; MARKERS.forEach((m) => { out[m] = ''; });
   const re = /\[([A-Z_]+)\]/g; let m; const found = [];
   while ((m = re.exec(text)) !== null) found.push({ key: m[1], idx: m.index, end: m.index + m[0].length });
   found.forEach((f, i) => {
@@ -286,58 +262,56 @@ function parseAI(text) {
   return out;
 }
 function buildCBCPrompt(f) {
+  const langName = LG === 'rw' ? 'Kinyarwanda' : LG === 'fr' ? 'French' : 'English';
   return [
-    'You are an expert Rwandan CBC teacher-trainer. Write everything in ' + (LG === 'rw' ? 'Kinyarwanda' : LG === 'fr' ? 'French' : 'English') + '.',
-    'A teacher needs a complete competence-based lesson plan in the official REB (elearning.reb.rw) format.',
-    'Lesson data: Subject: ' + f.subject + '; Class: ' + f.cls + '; Unit No: ' + (f.unit || 'N/A') + '; Unit title: ' + (f.utitle || f.topic) + '; Lesson title: ' + (f.ltitle || f.topic) + '; Duration: ' + f.dur + ' minutes; Class size: ' + (f.size || 'N/A') + '; SEN: ' + (f.sen || 'none') + '; Materials: ' + (f.mat || 'standard materials') + '; Location: ' + f.loc + '.',
-    (f.kuc ? 'Key unit competence (use this): ' + f.kuc : ''),
-    (f.objective ? 'Instructional objective (use this): ' + f.objective : ''),
-    'Write the plan using EXACTLY these section markers, each on its own line, with content after it. Use numbered lines "1. ..." inside activity sections.',
-    '[KUC] key unit competence sentence (skip if given above)',
-    '[OBJECTIVE] instructional objective: "Given ..., learners will be able to ... by ..." (condition, who, action, content, standard)',
-    '[INTRO_TEACHER] 3 numbered teacher activities for the introduction (start each with "To ..."): greet/check attendance, review previous lesson, introduce the topic and objective',
+    'You are an expert Rwandan CBC teacher-trainer. Write everything in ' + langName + '.',
+    'Create a COMPLETE competence-based lesson plan in the official REB (elearning.reb.rw) format for this lesson.',
+    'Given by the teacher: Subject: ' + f.subject + '; Class: ' + f.cls + '; Lesson title/topic: ' + f.ltitle + '; Duration: ' + f.dur + ' minutes; Class size: ' + (f.size || 'not given') + '; Unit No: ' + (f.unit || 'not given') + '; Unit title: ' + (f.utitle || 'infer it from the lesson title') + '; SEN learners: ' + (f.sen || 'none') + '; Materials: ' + (f.mat || 'choose suitable standard materials') + '.',
+    (f.extra ? 'Extra instructions from the teacher: ' + f.extra : ''),
+    'Infer everything not given: unit title, key unit competence, instructional objective (5 elements: condition, who, action, content, standard), all activities, assessment items, summary, assignment, generic competences and cross-cutting issues.',
+    'Reply with EXACTLY these markers, each on its own line, content after it. Numbered lines "1. ..." inside activity sections. Start teacher activities with "To ...".',
+    '[KUC] one-sentence key unit competence',
+    '[OBJECTIVE] instructional objective: "Given ..., learners will be able to ... by ..."',
+    '[INTRO_TEACHER] 3 numbered introduction teacher activities (greet/attendance, review previous lesson, introduce topic and objective)',
     '[INTRO_LEARNERS] 3 matching numbered learner activities (say if individual, in pairs, in groups or whole class)',
-    '[DEV_TEACHER] 4 numbered teacher activities for development, using CBC learner-centred techniques suitable for ' + f.subject + ' (present materials and guiding questions, organise group work, move around and support learners with special needs, invite presentations and summarise)',
+    '[DEV_TEACHER] 4 numbered development teacher activities using CBC learner-centred techniques for this subject (present materials/guiding questions, organise group work, move around and support including SEN learners, invite presentations and summarise)',
     '[DEV_LEARNERS] 4 matching numbered learner activities',
-    '[ASSESSMENT] 2-3 short individual assessment test items related to the objective, one per line',
+    '[ASSESSMENT] 2-3 short individual test items, one per line',
     '[SUMMARY] key points to write on the board',
     '[ASSIGNMENT] a suitable homework task',
-    '[GENERIC_INTRO] generic competences + cross-cutting issues for the introduction, 1-2 lines',
-    '[GENERIC_DEV] generic competences + cross-cutting issues for development (cooperation, critical thinking, inclusive education, gender equality...), 2-3 lines',
-    '[GENERIC_CONCL] generic competences + cross-cutting issues for the conclusion, 1-2 lines',
-    '[TECHNIQUES] teaching techniques and methods used, comma separated',
-    'Be professional, realistic and ready to submit. No extra commentary outside the markers.'
+    '[GENERIC_INTRO] generic competences + cross-cutting issues for introduction, 1-2 lines',
+    '[GENERIC_DEV] generic competences + cross-cutting issues for development, 2-3 lines',
+    '[GENERIC_CONCL] generic competences + cross-cutting issues for conclusion, 1-2 lines',
+    '[TECHNIQUES] teaching techniques used, comma separated',
+    'Be professional, realistic and ready for submission. No text outside the markers.'
   ].filter(Boolean).join('\n');
 }
 
-/* ================= Build the REB plan table ================= */
+/* ================= Build the EXACT REB plan table ================= */
 function buildPlan(f, ai) {
   const dur = +f.dur || 40;
-  let mv = [+f.min1 || 0, +f.min2 || 0, +f.min3 || 0];
-  const W = [15, 70, 15];
-  const fx = mv.reduce((x, y) => x + y, 0);
-  const fr = [0, 1, 2].filter((k) => !mv[k]);
-  if (fr.length) { const rs = sp(Math.max(fr.length, dur - fx), fr.map((k) => W[k])); fr.forEach((k, j) => mv[k] = rs[j]); }
+  const mv = sp(dur, [15, 70, 15]);
   const [i, d, a] = mv;
 
   const lines = (s) => (s || '').split('\n').map((x) => x.trim()).filter(Boolean).map((x) => x.replace(/^\d+[.)]\s*/, ''));
   const iT = lines(ai.INTRO_TEACHER), iL = lines(ai.INTRO_LEARNERS);
   const dT = lines(ai.DEV_TEACHER), dL = lines(ai.DEV_LEARNERS);
-  const intro = iT.length ? L(iT) : '1. To greet learners and check attendance.\n2. To ask review questions linked to the previous lesson (whole class).\n3. To introduce the topic "' + (f.ltitle || f.topic) + '" and state the objective.';
+  const topic = f.ltitle || '';
+  const intro = iT.length ? L(iT) : '1. To greet learners and check attendance.\n2. To ask review questions linked to the previous lesson (whole class).\n3. To introduce the topic "' + topic + '" and state the objective.';
   const introL = iL.length ? L(iL) : '1. To greet the teacher.\n2. To answer review questions (whole class).\n3. To listen and ask questions about the new topic.';
   const dev = dT.length ? L(dT) : '1. To present the learning materials and ask guiding questions.\n2. To organise learners in small groups and give clear instructions.\n3. To move around, guide learners and support those with special needs.\n4. To invite learners to present findings, correct them and summarise.';
   const devL = dL.length ? L(dL) : '1. To observe the materials and answer the questions (whole class).\n2. To form groups and listen to instructions.\n3. To carry out the task in small groups.\n4. To present findings, ask questions and copy the summary.';
   const assessment = ai.ASSESSMENT || '1. Short individual written task based on the objective.\n2. Oral questions to check understanding.';
-  const summary = ai.SUMMARY || ('Key points about "' + (f.ltitle || f.topic) + '".');
+  const summary = ai.SUMMARY || ('Key points about "' + topic + '".');
   const assignment = ai.ASSIGNMENT || 'Exercise related to the lesson in the pupils\' book.';
   const gi = ai.GENERIC_INTRO || 'Communication: learners express ideas when answering review questions.';
   const gd = ai.GENERIC_DEV || 'Cooperation, critical thinking and inclusive education: every learner, including those with SEN, participates in group work.';
   const ga = ai.GENERIC_CONCL || 'Critical thinking: learners apply what they learned.\nCross-cutting: inclusive education (feedback to every learner).';
   const tech = ai.TECHNIQUES || PRE[f.subject] || DEF_TECH;
-  const obj = ai.OBJECTIVE || (f.objective || '');
-  const kuc = ai.KUC || f.kuc || '';
-  const sum = t('Techniques: {0}. Resources: {1}. Learners work in small groups. Location: {2}.', tech, f.mat || t('the lesson'), f.loc);
-  const sen = e(f.sen || DOT) + (f.senacc ? '\n' + t('Accommodation:') + ' ' + e(f.senacc) : '');
+  const obj = ai.OBJECTIVE || '';
+  const kuc = ai.KUC || '';
+  const sum = t('Techniques: {0}. Resources: {1}. Learners work in small groups. Location: {2}.', tech, f.mat || t('the lesson'), t('Inside'));
+  const sen = (f.sen ? e(f.sen) : DOT) + (f.senacc ? '\n' + t('Accommodation:') + ' ' + e(f.senacc) : '');
   const d0 = f.date ? f.date.split('-').reverse().join('/') : '....../....../20......';
   const fill = (v) => v ? e(v) : '<span class="dot">' + DOT + '</span>';
   const edf = (v) => ed(v ? e(v) : '<span class="dot">' + DOT + '</span>');
@@ -350,11 +324,11 @@ function buildPlan(f, ai) {
     '<tr><td class="lb" colspan="2">' + t('Type of special educational needs to be catered for in this lesson and numbers of learners in each category') + '</td><td colspan="5">' + ed(sen) + '</td></tr>' +
     '<tr><td class="lb" colspan="2">' + t('Unit title') + '</td><td colspan="5">' + edf(f.utitle) + '</td></tr>' +
     '<tr><td class="lb" colspan="2">' + t('Key unit competence') + '</td><td colspan="5">' + edf(kuc) + '</td></tr>' +
-    '<tr><td class="lb" colspan="2">' + t('Title of the lesson') + '</td><td colspan="5">' + edf(f.ltitle || f.topic) + '</td></tr>' +
+    '<tr><td class="lb" colspan="2">' + t('Title of the lesson') + '</td><td colspan="5">' + edf(topic) + '</td></tr>' +
     '<tr><td class="lb" colspan="2">' + t('Instructional objectives') + '</td><td colspan="5">' + edf(obj) + '</td></tr>' +
-    '<tr><td class="lb" colspan="2">' + t('Plan of this class (location: in / outside)') + '</td><td colspan="5">' + ed(f.loc) + '</td></tr>' +
+    '<tr><td class="lb" colspan="2">' + t('Plan of this class (location: in / outside)') + '</td><td colspan="5">' + ed(t('Inside')) + '</td></tr>' +
     '<tr><td class="lb" colspan="2">' + t('Learning materials (for all learners)') + '</td><td colspan="5">' + edf(f.mat) + '</td></tr>' +
-    '<tr><td class="lb" colspan="2">' + t('References') + '</td><td colspan="5">' + edf(f.ref) + '</td></tr>' +
+    '<tr><td class="lb" colspan="2">' + t('References') + '</td><td colspan="5">' + edf(t("Pupil's Book, teacher's guide, REB syllabus")) + '</td></tr>' +
     '<tr><th rowspan="3">' + t('Timing for each step') + '</th><th colspan="4" style="text-align:center">' + t('Description of teaching and learning activities') + '</th><th colspan="2" rowspan="3">' + t('Generic competence and cross-cutting issues to be addressed + a short explanation') + '</th></tr>' +
     '<tr><td colspan="4">' + ed(sum) + '</td></tr>' +
     '<tr><th colspan="2">' + t("Teacher's activity") + '</th><th colspan="2">' + t("Learner's activity") + '</th></tr>' +
@@ -370,14 +344,14 @@ function buildPlan(f, ai) {
 
 /* ================= Saved plans library ================= */
 const K = 'ghad_plans'; let cur = null;
-const fields = () => Array.from(document.querySelectorAll('#form input,#form textarea,#form select'));
+const fields = () => Array.from(document.querySelectorAll('#form input,#form select'));
 function getAll() { try { return JSON.parse(localStorage.getItem(K) || '[]'); } catch (_) { return []; } }
 function putAll(a) { try { localStorage.setItem(K, JSON.stringify(a)); return true; } catch (_) { return false; } }
 function savePlan() {
   const all = getAll(), f = {}; fields().forEach((x) => { f[x.id] = x.value; });
   const r = { id: cur || String(Date.now()), title: $('ltitle').value || '-', subject: subjRaw(), cls: $('cls').value || '-', upd: new Date().toLocaleDateString(), f, plan: $('plan').innerHTML };
   const k = all.findIndex((p) => p.id === r.id); if (k >= 0) all[k] = r; else all.unshift(r); cur = r.id;
-  if (!putAll(all)) toast(t('Could not save in this browser.'), 'error'); else toast(t('💾 Save plan') + ' ✓', 'success');
+  if (!putAll(all)) toast(t('Could not save in this browser.'), 'error'); else toast('💾 ✓', 'success');
   renderLib();
 }
 function loadPlan(id) {
@@ -402,39 +376,28 @@ function renderLib() {
 }
 
 /* ================= AI lesson generation ================= */
-const busy = (btn, on) => { if (!btn) return; if (on) { btn.dataset.o = btn.textContent; btn.textContent = t('⏳ Generating…'); btn.disabled = true; } else { btn.textContent = btn.dataset.o || btn.textContent; btn.disabled = false; } };
-function collectForm() {
-  return {
-    school: $('school').value, teacher: $('teacher').value, term: $('term').value, date: $('date').value,
-    subject: $('subject').value, cls: $('cls').value, unit: $('unit').value, lesson: $('lesson').value,
-    dur: $('dur').value, size: $('size').value, min1: $('min1').value, min2: $('min2').value, min3: $('min3').value,
-    sen: $('sen').value, senacc: $('senacc').value, utitle: $('utitle').value, ltitle: $('ltitle').value,
-    o1: $('o1').value, o3: $('o3').value, o4: $('o4').value, o5: $('o5').value,
-    loc: $('loc').value, mat: $('mat').value, ref: $('ref').value
-  };
-}
-function formObjective(f) {
-  const parts = [f.o1, 'learners', f.o3, f.o4, f.o5];
-  if (!f.o1 && !f.o3) return '';
-  return t('{0}, {1} will be able to {2} {3} {4}.', f.o1 || '', 'learners', f.o3 || '', f.o4 || '', f.o5 || '').replace(/^, /, '');
-}
+const busy = (btn, on) => {
+  if (!btn) return;
+  if (on) { btn.dataset.o = btn.textContent; btn.textContent = t('⏳ Generating…'); btn.disabled = true; }
+  else { btn.textContent = btn.dataset.o || btn.textContent; btn.disabled = false; }
+};
 safe($('genBtn'), (btn) => btn.addEventListener('click', async () => {
-  const f = collectForm();
+  const f = {
+    subject: $('subject').value, cls: $('cls').value, ltitle: $('ltitle').value,
+    dur: $('dur').value || '40', size: $('size').value,
+    school: $('school').value, teacher: $('teacher').value, term: $('term').value, date: $('date').value,
+    unit: $('unit').value, lesson: $('lesson').value, utitle: $('utitle').value,
+    sen: $('sen').value, mat: $('mat').value, extra: $('extra').value
+  };
   if (!f.subject || !f.cls || !f.ltitle) { toast(t('Please fill subject, class and topic'), 'error'); return; }
-  f.topic = f.ltitle; f.kuc = ''; f.objective = formObjective(f);
-  busy(btn, true);
-  toast(t('The AI is writing your lesson plan…'));
+  busy(btn, true); toast(t('The AI is writing your lesson plan…'));
   try {
-    const raw = await postJSON('/api/lesson', {
-      language: LG, type: 'lesson_plan_reb', form: f, prompt: buildCBCPrompt(f)
-    });
-    const ai = parseAI(raw);
-    buildPlan(f, ai);
+    const raw = await postJSON('/api/lesson', { language: LG, type: 'lesson_plan_reb', form: f, prompt: buildCBCPrompt(f) });
+    buildPlan(f, parseAI(raw));
     toast(t('Lesson plan generated'), 'success');
   } catch (err) {
-    // offline fallback: still build a professional plan from the form
     buildPlan(f, parseAI(''));
-    toast((t('Failed: network error')) + (err && err.message ? ' — ' + err.message : '') + ' (default plan used)', 'error');
+    toast(t('Failed: network error') + ' — ' + t('Lesson plan generated') + ' (default)', 'error');
   } finally { busy(btn, false); }
 }));
 safe($('saveBtn'), (el) => el.addEventListener('click', savePlan));
@@ -442,7 +405,7 @@ safe($('printBtn'), (el) => el.addEventListener('click', () => window.print()));
 safe($('topBtn'), (el) => el.addEventListener('click', () => $('out').scrollIntoView({ behavior: 'smooth' })));
 safe($('newBtn'), (el) => el.addEventListener('click', () => {
   cur = null;
-  ['date', 'unit', 'lesson', 'sen', 'senacc', 'utitle', 'ltitle', 'o1', 'o3', 'o4', 'o5', 'mat', 'ref', 'min1', 'min2', 'min3'].forEach((k) => { const el = $(k); if (el) el.value = ''; });
+  ['ltitle', 'size', 'unit', 'lesson', 'utitle', 'sen', 'mat', 'extra'].forEach((k) => { const el = $(k); if (el) el.value = ''; });
   $('out').style.display = 'none'; window.scrollTo({ top: 0, behavior: 'smooth' });
 }));
 
@@ -493,37 +456,35 @@ safe($('sendChat'), (btn) => btn.addEventListener('click', sendChat));
 safe($('chatInput'), (el) => el.addEventListener('keydown', (ev) => { if (ev.key === 'Enter' && !ev.shiftKey) { ev.preventDefault(); sendChat(); } }));
 safe($('newChatBtn'), (btn) => btn.addEventListener('click', () => { chatId = null; currentChat(); renderChat(); toast(t('New chat started.'), 'success'); }));
 safe($('delChatBtn'), (btn) => btn.addEventListener('click', () => {
-  if (!confirm(t('Delete this plan?').replace('plan', 'chat history'))) { /* still confirm */ }
+  if (!confirm(t('Delete chat history?'))) return;
   try { localStorage.removeItem(CK); } catch (_) {}
   chatId = null; renderChat(); toast(t('Chat history deleted.'), 'success');
 }));
 
-/* ================= Assessment & Methodology (AI) ================= */
-function mdToText(s) { return String(s); }
+/* ================= Assessment & Methodology (your AI endpoints) ================= */
+const val = (id) => { const el = $(id); return el ? el.value : ''; };
 safe($('generateAssessment'), (btn) => btn.addEventListener('click', async () => {
-  const v = (id) => { const el = $(id); return el ? el.value : ''; };
-  const p = { language: LG, subject: v('assessSubject'), class: v('assessClass'), topic: v('assessTopic'), count: v('assessCount') || '5', difficulty: v('assessDifficulty') || 'medium', type: v('assessType') || 'mcq' };
+  const p = { language: LG, subject: val('assessSubject'), class: val('assessClass'), topic: val('assessTopic'), count: val('assessCount') || '5', difficulty: val('assessDifficulty') || 'medium', type: val('assessType') || 'mcq' };
   if (!p.subject || !p.class || !p.topic) { toast(t('Please fill subject, class and topic'), 'error'); return; }
   busy(btn, true);
   try {
     const text = await postJSON('/api/assessment', p);
     const out = $('assessmentOutput'), body = $('assessmentBody');
-    if (out && body) { body.textContent = mdToText(text); out.classList.remove('hidden'); out.dataset.raw = text; }
+    if (out && body) { body.textContent = text; out.classList.remove('hidden'); out.dataset.raw = text; }
     toast(t('Assessment generated'), 'success');
-  } catch (err) { toast(t('Failed: network error'), 'error'); } finally { busy(btn, false); }
+  } catch (_) { toast(t('Failed: network error'), 'error'); } finally { busy(btn, false); }
 }));
 safe($('copyAssessment'), (btn) => btn.addEventListener('click', () => { const o = $('assessmentOutput'); if (o && o.dataset.raw) copyText(o.dataset.raw); }));
 safe($('generateMethodology'), (btn) => btn.addEventListener('click', async () => {
-  const v = (id) => { const el = $(id); return el ? el.value : ''; };
-  const p = { language: LG, subject: v('methodSubject'), class: v('methodClass'), topic: v('methodTopic') };
+  const p = { language: LG, subject: val('methodSubject'), class: val('methodClass'), topic: val('methodTopic') };
   if (!p.subject || !p.class || !p.topic) { toast(t('Please fill subject, class and topic'), 'error'); return; }
   busy(btn, true);
   try {
     const text = await postJSON('/api/methodology', p);
     const out = $('methodologyOutput'), body = $('methodologyBody');
-    if (out && body) { body.textContent = mdToText(text); out.classList.remove('hidden'); out.dataset.raw = text; }
+    if (out && body) { body.textContent = text; out.classList.remove('hidden'); out.dataset.raw = text; }
     toast(t('Methodology generated'), 'success');
-  } catch (err) { toast(t('Failed: network error'), 'error'); } finally { busy(btn, false); }
+  } catch (_) { toast(t('Failed: network error'), 'error'); } finally { busy(btn, false); }
 }));
 safe($('copyMethodology'), (btn) => btn.addEventListener('click', () => { const o = $('methodologyOutput'); if (o && o.dataset.raw) copyText(o.dataset.raw); }));
 
@@ -542,9 +503,7 @@ try { const p = JSON.parse(localStorage.getItem(PK) || '{}'); ['school', 'teache
 })));
 
 /* ================= Init ================= */
-try {
-  const th = localStorage.getItem('ghad_theme') || 'auto'; setTheme(th);
-} catch (_) { setTheme('auto'); }
+try { setTheme(localStorage.getItem('ghad_theme') || 'auto'); } catch (_) { setTheme('auto'); }
 setLang(LG);
 renderLib();
 try { const all = getChats(); if (all.length) chatId = all[0].id; } catch (_) {}
