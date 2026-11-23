@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GHAD AI — Teaching Assistant for Rwanda's CBC</title>
-  <meta name="description" content="GHAD AI: AI-powered lesson plans, assessments, methodology and a teaching assistant built for Rwanda's Competence-Based Curriculum (REB CBC) in English, Kinyarwanda and French." />
+  <meta name="description" content="GHAD AI: CBC-compliant lesson plans, assessments, methodology and a teaching assistant for Rwanda's Competence-Based Curriculum in English, Kinyarwanda and French." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231e6bff'/%3E%3Cstop offset='1' stop-color='%2300c2a8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Cpath d='M32 14 50 22 32 30 14 22Z' fill='%23fff'/%3E%3Cpath d='M20 27v10c0 4 6 7 12 7s12-3 12-7V27l-12 5.4Z' fill='%23ffffffcc'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -13,10 +13,14 @@
   <!-- ================= LANDING PAGE ================= -->
   <div id="landingPage">
 
-    <header class="landing-header">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <header class="landing-header glass">
       <div class="brand" data-tilt>
         <div class="brand-logo">
-          <svg viewBox="0 0 64 64" width="34" height="34" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
             <defs>
               <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0" stop-color="#1e6bff"/>
@@ -30,7 +34,7 @@
         </div>
         <div class="brand-text">
           <strong>GHAD&nbsp;AI</strong>
-          <span>Rwanda CBC Teaching Assistant</span>
+          <span data-i18n="brand_tag">Rwanda CBC Teaching Assistant</span>
         </div>
       </div>
 
@@ -40,91 +44,97 @@
           <option value="rw">Kinyarwanda</option>
           <option value="fr">Français</option>
         </select>
-        <button id="landingLaunchBtn" class="btn btn-primary" data-launch="dashboard">Open Workspace</button>
+        <button id="landingLaunchBtn" class="btn btn-primary btn-3d" data-launch="dashboard" data-i18n="open_workspace">Open Workspace</button>
       </div>
     </header>
 
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-glow hero-glow-1"></div>
-      <div class="hero-glow hero-glow-2"></div>
       <div class="hero-inner">
-        <span class="hero-badge">Aligned with REB Competence-Based Curriculum</span>
-        <h1>Plan smarter.<br /><span class="grad-text">Teach better.</span></h1>
-        <p class="hero-sub">
+        <span class="hero-badge" data-tilt>✦ <span data-i18n="hero_badge">Aligned with REB Competence-Based Curriculum</span></span>
+        <h1><span data-i18n="hero_title_1">Plan smarter.</span><br /><span class="grad-text" data-i18n="hero_title_2">Teach better.</span></h1>
+        <p class="hero-sub" data-i18n="hero_sub">
           Generate CBC-compliant lesson plans, assessments and teaching methodologies in
           English, Kinyarwanda or French — plus an always-on teaching assistant.
         </p>
         <div class="hero-cta">
-          <button class="btn btn-primary btn-lg" data-launch="lesson">Create a Lesson</button>
-          <button class="btn btn-ghost btn-lg" data-launch="assistant">Ask the Assistant</button>
+          <button class="btn btn-primary btn-lg btn-3d" data-launch="lesson" data-i18n="cta_lesson">Create a Lesson</button>
+          <button class="btn btn-ghost btn-lg" data-launch="assistant" data-i18n="cta_assistant">Ask the Assistant</button>
         </div>
         <div class="hero-stats">
-          <div class="stat"><strong>3</strong><span>Languages</span></div>
-          <div class="stat"><strong>4</strong><span>AI Tools</span></div>
-          <div class="stat"><strong>P1–S6</strong><span>All Levels</span></div>
+          <div class="stat" data-tilt><strong>3</strong><span data-i18n="stat_langs">Languages</span></div>
+          <div class="stat" data-tilt><strong>4</strong><span data-i18n="stat_tools">AI Tools</span></div>
+          <div class="stat" data-tilt><strong>P1–S6</strong><span data-i18n="stat_levels">All Levels</span></div>
         </div>
       </div>
     </section>
 
     <!-- WORKFLOW -->
     <section class="section">
-      <h2 class="section-title">How it works</h2>
-      <p class="section-sub">From blank page to classroom-ready in three steps.</p>
+      <h2 class="section-title" data-i18n="how_title">How it works</h2>
+      <p class="section-sub" data-i18n="how_sub">From blank page to classroom-ready in three steps.</p>
       <div class="steps">
-        <article class="step-card" data-tilt>
+        <article class="step-card card3d" data-tilt>
           <div class="step-num">1</div>
-          <h3>Describe your class</h3>
-          <p>Pick the subject, class level (P1–S6), unit, topic and lesson duration.</p>
+          <h3 data-i18n="step1_t">Describe your class</h3>
+          <p data-i18n="step1_d">Pick the subject, class level (P1–S6), unit, topic and lesson duration.</p>
         </article>
-        <article class="step-card" data-tilt>
+        <article class="step-card card3d" data-tilt>
           <div class="step-num">2</div>
-          <h3>Generate with AI</h3>
-          <p>GHAD AI drafts a CBC-compliant plan, assessment or methodology instantly.</p>
+          <h3 data-i18n="step2_t">Generate with AI</h3>
+          <p data-i18n="step2_d">GHAD AI drafts a CBC-compliant plan, assessment or methodology instantly.</p>
         </article>
-        <article class="step-card" data-tilt>
+        <article class="step-card card3d" data-tilt>
           <div class="step-num">3</div>
-          <h3>Teach &amp; refine</h3>
-          <p>Copy, edit and adapt the output. Ask the assistant anything, anytime.</p>
+          <h3 data-i18n="step3_t">Teach &amp; refine</h3>
+          <p data-i18n="step3_d">Copy, edit and adapt the output. Ask the assistant anything, anytime.</p>
         </article>
       </div>
     </section>
 
     <!-- TOOL SHOWCASE -->
     <section class="section">
-      <h2 class="section-title">Your teaching toolkit</h2>
-      <p class="section-sub">Four purpose-built tools, one workspace.</p>
+      <h2 class="section-title" data-i18n="tools_title">Your teaching toolkit</h2>
+      <p class="section-sub" data-i18n="tools_sub">Four purpose-built tools, one workspace.</p>
       <div class="tools-grid">
-        <button class="feature-card" data-tilt data-view="lesson" data-launch="lesson">
+        <button class="feature-card card3d" data-tilt data-view="lesson" data-launch="lesson">
           <div class="card-icon">📘</div>
-          <h3>Lesson Planner</h3>
-          <p>Full CBC lesson plans with competences, activities and assessment.</p>
-          <span class="card-link">Open →</span>
+          <h3 data-i18n="tool_lesson_t">Lesson Planner</h3>
+          <p data-i18n="tool_lesson_d">Full REB CBC lesson plans in the official competence-based format.</p>
+          <span class="card-link" data-i18n="open">Open →</span>
         </button>
-        <button class="feature-card" data-tilt data-view="assessment" data-launch="assessment">
+        <button class="feature-card card3d" data-tilt data-view="assessment" data-launch="assessment">
           <div class="card-icon">📝</div>
-          <h3>Assessment Builder</h3>
-          <p>Quizzes, exams and formative checks at any difficulty level.</p>
-          <span class="card-link">Open →</span>
+          <h3 data-i18n="tool_assess_t">Assessment Builder</h3>
+          <p data-i18n="tool_assess_d">Quizzes, exams and formative checks at any difficulty level.</p>
+          <span class="card-link" data-i18n="open">Open →</span>
         </button>
-        <button class="feature-card" data-tilt data-view="methodology" data-launch="methodology">
+        <button class="feature-card card3d" data-tilt data-view="methodology" data-launch="methodology">
           <div class="card-icon">🧠</div>
-          <h3>Methodology Guide</h3>
-          <p>Learner-centred teaching strategies tailored to your topic.</p>
-          <span class="card-link">Open →</span>
+          <h3 data-i18n="tool_method_t">Methodology Guide</h3>
+          <p data-i18n="tool_method_d">Learner-centred teaching strategies tailored to your topic.</p>
+          <span class="card-link" data-i18n="open">Open →</span>
         </button>
-        <button class="feature-card" data-tilt data-view="assistant" data-launch="assistant">
+        <button class="feature-card card3d" data-tilt data-view="assistant" data-launch="assistant">
           <div class="card-icon">💬</div>
-          <h3>AI Assistant</h3>
-          <p>Ask questions, get explanations and classroom ideas in seconds.</p>
-          <span class="card-link">Open →</span>
+          <h3 data-i18n="tool_ai_t">AI Assistant</h3>
+          <p data-i18n="tool_ai_d">Ask questions, get explanations and classroom ideas in seconds.</p>
+          <span class="card-link" data-i18n="open">Open →</span>
         </button>
       </div>
     </section>
 
+    <!-- TRUST STRIP -->
+    <section class="trust-strip">
+      <div class="trust-item" data-tilt>🏫 <span data-i18n="trust_1">Built for Rwandan schools</span></div>
+      <div class="trust-item" data-tilt>📗 <span data-i18n="trust_2">Official REB CBC format</span></div>
+      <div class="trust-item" data-tilt>🌐 <span data-i18n="trust_3">3 languages, one click</span></div>
+      <div class="trust-item" data-tilt>🔒 <span data-i18n="trust_4">Your data stays yours</span></div>
+    </section>
+
     <footer class="footer">
-      <p><strong>GHAD AI</strong> — Built for Rwanda's teachers. Aligned with REB CBC.</p>
-      <p class="muted">© <span id="footerYear">2026</span> GHAD AI. All rights reserved.</p>
+      <p><strong>GHAD AI</strong> — <span data-i18n="footer_line">Built for Rwanda's teachers. Aligned with REB CBC.</span></p>
+      <p class="muted">© <span id="footerYear">2026</span> GHAD AI. <span data-i18n="footer_rights">All rights reserved.</span></p>
     </footer>
   </div>
 
@@ -136,30 +146,30 @@
         <strong>GHAD AI</strong>
       </div>
 
-      <button id="backToHomeBtn" class="btn btn-ghost btn-block">← Back to Home</button>
+      <button id="backToHomeBtn" class="btn btn-ghost btn-block">← <span data-i18n="back_home">Back to Home</span></button>
 
       <nav class="sidebar-nav">
-        <button class="nav-btn active" data-view="dashboard"><span>🏠</span> Dashboard</button>
-        <button class="nav-btn" data-view="lesson"><span>📘</span> Lesson Planner</button>
-        <button class="nav-btn" data-view="assistant"><span>💬</span> Assistant</button>
-        <button class="nav-btn" data-view="assessment"><span>📝</span> Assessment</button>
-        <button class="nav-btn" data-view="methodology"><span>🧠</span> Methodology</button>
-        <button class="nav-btn" data-view="resources"><span>📚</span> Resources</button>
-        <button class="nav-btn" data-view="settings"><span>⚙️</span> Settings</button>
+        <button class="nav-btn active" data-view="dashboard"><span>🏠</span> <span data-i18n="nav_dashboard">Dashboard</span></button>
+        <button class="nav-btn" data-view="lesson"><span>📘</span> <span data-i18n="nav_lesson">Lesson Planner</span></button>
+        <button class="nav-btn" data-view="assistant"><span>💬</span> <span data-i18n="nav_assistant">Assistant</span></button>
+        <button class="nav-btn" data-view="assessment"><span>📝</span> <span data-i18n="nav_assessment">Assessment</span></button>
+        <button class="nav-btn" data-view="methodology"><span>🧠</span> <span data-i18n="nav_methodology">Methodology</span></button>
+        <button class="nav-btn" data-view="resources"><span>📚</span> <span data-i18n="nav_resources">Resources</span></button>
+        <button class="nav-btn" data-view="settings"><span>⚙️</span> <span data-i18n="nav_settings">Settings</span></button>
       </nav>
 
       <div class="sidebar-foot">
-        <label for="langSelect">Language</label>
+        <label for="langSelect" data-i18n="lang_label">Language</label>
         <select id="langSelect" class="select">
           <option value="en">English</option>
           <option value="rw">Kinyarwanda</option>
           <option value="fr">Français</option>
         </select>
-        <label for="themeSelect">Theme</label>
+        <label for="themeSelect" data-i18n="theme_label">Theme</label>
         <select id="themeSelect" class="select">
-          <option value="auto">Auto</option>
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
+          <option value="auto" data-i18n="theme_auto">Auto</option>
+          <option value="light" data-i18n="theme_light">Light</option>
+          <option value="dark" data-i18n="theme_dark">Dark</option>
         </select>
       </div>
     </aside>
@@ -170,50 +180,51 @@
 
       <!-- DASHBOARD -->
       <section id="view-dashboard" class="view active">
-        <h1 class="view-title">Welcome back 👋</h1>
-        <p class="view-sub">Choose a tool to get started.</p>
+        <h1 class="view-title" data-i18n="dash_title">Welcome back 👋</h1>
+        <p class="view-sub" data-i18n="dash_sub">Choose a tool to get started.</p>
         <div class="tools-grid">
-          <button class="feature-card" data-tilt data-view="lesson">
-            <div class="card-icon">📘</div><h3>Lesson Planner</h3><p>Build CBC lesson plans.</p>
+          <button class="feature-card card3d" data-tilt data-view="lesson">
+            <div class="card-icon">📘</div><h3 data-i18n="tool_lesson_t">Lesson Planner</h3><p data-i18n="dash_lesson_d">Build REB CBC lesson plans.</p>
           </button>
-          <button class="feature-card" data-tilt data-view="assistant">
-            <div class="card-icon">💬</div><h3>AI Assistant</h3><p>Ask anything, anytime.</p>
+          <button class="feature-card card3d" data-tilt data-view="assistant">
+            <div class="card-icon">💬</div><h3 data-i18n="tool_ai_t">AI Assistant</h3><p data-i18n="dash_ai_d">Ask anything, anytime.</p>
           </button>
-          <button class="feature-card" data-tilt data-view="assessment">
-            <div class="card-icon">📝</div><h3>Assessment</h3><p>Generate quizzes &amp; tests.</p>
+          <button class="feature-card card3d" data-tilt data-view="assessment">
+            <div class="card-icon">📝</div><h3 data-i18n="tool_assess_t">Assessment</h3><p data-i18n="dash_assess_d">Generate quizzes &amp; tests.</p>
           </button>
-          <button class="feature-card" data-tilt data-view="methodology">
-            <div class="card-icon">🧠</div><h3>Methodology</h3><p>Learner-centred strategies.</p>
+          <button class="feature-card card3d" data-tilt data-view="methodology">
+            <div class="card-icon">🧠</div><h3 data-i18n="tool_method_t">Methodology</h3><p data-i18n="dash_method_d">Learner-centred strategies.</p>
           </button>
-          <button class="feature-card" data-tilt data-view="resources">
-            <div class="card-icon">📚</div><h3>Resources</h3><p>Curriculum materials.</p>
+          <button class="feature-card card3d" data-tilt data-view="resources">
+            <div class="card-icon">📚</div><h3 data-i18n="nav_resources">Resources</h3><p data-i18n="dash_res_d">Curriculum materials.</p>
           </button>
-          <button class="feature-card" data-tilt data-view="settings">
-            <div class="card-icon">⚙️</div><h3>Settings</h3><p>Language &amp; theme.</p>
+          <button class="feature-card card3d" data-tilt data-view="settings">
+            <div class="card-icon">⚙️</div><h3 data-i18n="nav_settings">Settings</h3><p data-i18n="dash_set_d">Language &amp; theme.</p>
           </button>
         </div>
       </section>
 
       <!-- LESSON -->
       <section id="view-lesson" class="view">
-        <h1 class="view-title">Lesson Planner</h1>
-        <p class="view-sub">Generate a CBC-compliant lesson plan.</p>
-        <form id="lessonForm" class="gen-form" autocomplete="off">
+        <h1 class="view-title" data-i18n="lesson_title">Lesson Planner</h1>
+        <p class="view-sub" data-i18n="lesson_sub">Generate an official REB CBC competence-based lesson plan.</p>
+        <form id="lessonForm" class="gen-form card3d" autocomplete="off">
           <div class="field-grid">
-            <label>Subject<input id="lessonSubject" class="input" type="text" placeholder="e.g. Mathematics" required /></label>
-            <label>Class<input id="lessonClass" class="input" type="text" placeholder="e.g. P4" required /></label>
-            <label>Topic<input id="lessonTopic" class="input" type="text" placeholder="e.g. Fractions" required /></label>
-            <label>Duration (min)<input id="lessonDuration" class="input" type="number" value="40" min="10" max="240" /></label>
-            <label>Unit<input id="lessonUnit" class="input" type="text" placeholder="e.g. Unit 3" /></label>
-            <label>Learners<input id="lessonLearners" class="input" type="number" value="40" min="1" /></label>
+            <label data-i18n="f_subject">Subject<input id="lessonSubject" class="input" type="text" placeholder="e.g. Mathematics" required /></label>
+            <label data-i18n="f_class">Class<input id="lessonClass" class="input" type="text" placeholder="e.g. P4" required /></label>
+            <label data-i18n="f_topic">Topic<input id="lessonTopic" class="input" type="text" placeholder="e.g. Fractions" required /></label>
+            <label data-i18n="f_duration">Duration (min)<input id="lessonDuration" class="input" type="number" value="40" min="10" max="240" /></label>
+            <label data-i18n="f_unit">Unit<input id="lessonUnit" class="input" type="text" placeholder="e.g. Unit 3" /></label>
+            <label data-i18n="f_learners">Learners<input id="lessonLearners" class="input" type="number" value="40" min="1" /></label>
           </div>
-          <label>Extra instructions<textarea id="lessonExtra" class="input" rows="3" placeholder="Anything special to include…"></textarea></label>
-          <button type="button" id="generateLesson" class="btn btn-primary">✨ Generate Lesson Plan</button>
+          <label data-i18n="f_extra">Extra instructions<textarea id="lessonExtra" class="input" rows="3" placeholder="Anything special to include…"></textarea></label>
+          <button type="button" id="generateLesson" class="btn btn-primary btn-3d">✨ <span data-i18n="btn_lesson">Generate Lesson Plan</span></button>
         </form>
         <div id="lessonOutput" class="output hidden">
           <div class="output-head">
-            <strong>Lesson Plan</strong>
-            <button id="copyLesson" class="btn btn-ghost btn-sm">📋 Copy</button>
+            <strong data-i18n="out_lesson">Lesson Plan</strong>
+            <button id="copyLesson" class="btn btn-ghost btn-sm">📋 <span data-i18n="copy">Copy</span></button>
+            <button id="printLesson" class="btn btn-ghost btn-sm">🖨️ <span data-i18n="print">Print / PDF</span></button>
           </div>
           <div id="lessonBody" class="output-body"></div>
         </div>
@@ -221,48 +232,48 @@
 
       <!-- ASSISTANT -->
       <section id="view-assistant" class="view">
-        <h1 class="view-title">Teaching Assistant</h1>
-        <p class="view-sub">Ask anything about teaching the CBC.</p>
-        <div id="chatMessages" class="chat-messages">
-          <div class="chat-msg bot">Hello! I'm your GHAD AI assistant. How can I help with your lesson today?</div>
+        <h1 class="view-title" data-i18n="assistant_title">Teaching Assistant</h1>
+        <p class="view-sub" data-i18n="assistant_sub">Ask anything about teaching the CBC.</p>
+        <div id="chatMessages" class="chat-messages card3d">
+          <div class="chat-msg bot" data-i18n="chat_welcome">Hello! I'm your GHAD AI assistant. How can I help with your lesson today?</div>
         </div>
         <div class="chat-input-row">
-          <input id="chatInput" class="input" type="text" placeholder="Type your question…" />
-          <button id="sendChat" class="btn btn-primary">Send</button>
+          <input id="chatInput" class="input" type="text" data-i18n-ph="chat_ph" placeholder="Type your question…" />
+          <button id="sendChat" class="btn btn-primary btn-3d" data-i18n="send">Send</button>
         </div>
       </section>
 
       <!-- ASSESSMENT -->
       <section id="view-assessment" class="view">
-        <h1 class="view-title">Assessment Builder</h1>
-        <p class="view-sub">Create quizzes and tests aligned to your topic.</p>
-        <form id="assessmentForm" class="gen-form" autocomplete="off">
+        <h1 class="view-title" data-i18n="assess_title">Assessment Builder</h1>
+        <p class="view-sub" data-i18n="assess_sub">Create quizzes and tests aligned to your topic.</p>
+        <form id="assessmentForm" class="gen-form card3d" autocomplete="off">
           <div class="field-grid">
-            <label>Subject<input id="assessSubject" class="input" type="text" placeholder="e.g. Biology" required /></label>
-            <label>Class<input id="assessClass" class="input" type="text" placeholder="e.g. S2" required /></label>
-            <label>Topic<input id="assessTopic" class="input" type="text" placeholder="e.g. Photosynthesis" required /></label>
-            <label>Questions<input id="assessCount" class="input" type="number" value="5" min="1" max="50" /></label>
-            <label>Difficulty
+            <label data-i18n="f_subject">Subject<input id="assessSubject" class="input" type="text" placeholder="e.g. Biology" required /></label>
+            <label data-i18n="f_class">Class<input id="assessClass" class="input" type="text" placeholder="e.g. S2" required /></label>
+            <label data-i18n="f_topic">Topic<input id="assessTopic" class="input" type="text" placeholder="e.g. Photosynthesis" required /></label>
+            <label data-i18n="f_questions">Questions<input id="assessCount" class="input" type="number" value="5" min="1" max="50" /></label>
+            <label data-i18n="f_difficulty">Difficulty
               <select id="assessDifficulty" class="input">
-                <option value="easy">Easy</option>
-                <option value="medium" selected>Medium</option>
-                <option value="hard">Hard</option>
+                <option value="easy" data-i18n="diff_easy">Easy</option>
+                <option value="medium" selected data-i18n="diff_medium">Medium</option>
+                <option value="hard" data-i18n="diff_hard">Hard</option>
               </select>
             </label>
-            <label>Type
+            <label data-i18n="f_type">Type
               <select id="assessType" class="input">
-                <option value="mcq">Multiple Choice</option>
-                <option value="short">Short Answer</option>
-                <option value="mixed">Mixed</option>
+                <option value="mcq" data-i18n="type_mcq">Multiple Choice</option>
+                <option value="short" data-i18n="type_short">Short Answer</option>
+                <option value="mixed" data-i18n="type_mixed">Mixed</option>
               </select>
             </label>
           </div>
-          <button type="button" id="generateAssessment" class="btn btn-primary">✨ Generate Assessment</button>
+          <button type="button" id="generateAssessment" class="btn btn-primary btn-3d">✨ <span data-i18n="btn_assess">Generate Assessment</span></button>
         </form>
         <div id="assessmentOutput" class="output hidden">
           <div class="output-head">
-            <strong>Assessment</strong>
-            <button id="copyAssessment" class="btn btn-ghost btn-sm">📋 Copy</button>
+            <strong data-i18n="out_assess">Assessment</strong>
+            <button id="copyAssessment" class="btn btn-ghost btn-sm">📋 <span data-i18n="copy">Copy</span></button>
           </div>
           <div id="assessmentBody" class="output-body"></div>
         </div>
@@ -270,20 +281,20 @@
 
       <!-- METHODOLOGY -->
       <section id="view-methodology" class="view">
-        <h1 class="view-title">Methodology Guide</h1>
-        <p class="view-sub">Get learner-centred teaching strategies.</p>
-        <form id="methodologyForm" class="gen-form" autocomplete="off">
+        <h1 class="view-title" data-i18n="method_title">Methodology Guide</h1>
+        <p class="view-sub" data-i18n="method_sub">Get learner-centred teaching strategies.</p>
+        <form id="methodologyForm" class="gen-form card3d" autocomplete="off">
           <div class="field-grid">
-            <label>Subject<input id="methodSubject" class="input" type="text" placeholder="e.g. Chemistry" required /></label>
-            <label>Class<input id="methodClass" class="input" type="text" placeholder="e.g. S3" required /></label>
-            <label>Topic<input id="methodTopic" class="input" type="text" placeholder="e.g. Acids and Bases" required /></label>
+            <label data-i18n="f_subject">Subject<input id="methodSubject" class="input" type="text" placeholder="e.g. Chemistry" required /></label>
+            <label data-i18n="f_class">Class<input id="methodClass" class="input" type="text" placeholder="e.g. S3" required /></label>
+            <label data-i18n="f_topic">Topic<input id="methodTopic" class="input" type="text" placeholder="e.g. Acids and Bases" required /></label>
           </div>
-          <button type="button" id="generateMethodology" class="btn btn-primary">✨ Generate Methodology</button>
+          <button type="button" id="generateMethodology" class="btn btn-primary btn-3d">✨ <span data-i18n="btn_method">Generate Methodology</span></button>
         </form>
         <div id="methodologyOutput" class="output hidden">
           <div class="output-head">
-            <strong>Methodology</strong>
-            <button id="copyMethodology" class="btn btn-ghost btn-sm">📋 Copy</button>
+            <strong data-i18n="out_method">Methodology</strong>
+            <button id="copyMethodology" class="btn btn-ghost btn-sm">📋 <span data-i18n="copy">Copy</span></button>
           </div>
           <div id="methodologyBody" class="output-body"></div>
         </div>
@@ -291,8 +302,8 @@
 
       <!-- RESOURCES -->
       <section id="view-resources" class="view">
-        <h1 class="view-title">Resources</h1>
-        <p class="view-sub">Useful links for Rwandan teachers.</p>
+        <h1 class="view-title" data-i18n="res_title">Resources</h1>
+        <p class="view-sub" data-i18n="res_sub">Useful links for Rwandan teachers.</p>
         <div class="resource-list">
           <a class="resource-card" href="https://www.reb.rw" target="_blank" rel="noopener">🏛️ Rwanda Education Board (REB)</a>
           <a class="resource-card" href="https://elearning.reb.rw" target="_blank" rel="noopener">💻 REB e-Learning Platform</a>
@@ -302,20 +313,20 @@
 
       <!-- SETTINGS -->
       <section id="view-settings" class="view">
-        <h1 class="view-title">Settings</h1>
-        <p class="view-sub">Personalise your workspace.</p>
-        <div class="settings-card">
-          <label for="settingsLang">Preferred language</label>
+        <h1 class="view-title" data-i18n="settings_title">Settings</h1>
+        <p class="view-sub" data-i18n="settings_sub">Personalise your workspace.</p>
+        <div class="settings-card card3d">
+          <label for="settingsLang" data-i18n="settings_lang">Preferred language</label>
           <select id="settingsLang" class="input">
             <option value="en">English</option>
             <option value="rw">Kinyarwanda</option>
             <option value="fr">Français</option>
           </select>
-          <label for="settingsTheme">Theme</label>
+          <label for="settingsTheme" data-i18n="theme_label">Theme</label>
           <select id="settingsTheme" class="input">
-            <option value="auto">Auto</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
+            <option value="auto" data-i18n="theme_auto">Auto</option>
+            <option value="light" data-i18n="theme_light">Light</option>
+            <option value="dark" data-i18n="theme_dark">Dark</option>
           </select>
         </div>
       </section>
