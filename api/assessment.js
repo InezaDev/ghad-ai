@@ -3,11 +3,11 @@ export default async function handler(req, res) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) return res.status(500).json({ error: "GEMINI_API_KEY is missing" });
 
-  const { subject, class: grade, topic, count, difficulty, type, language } = req.body || {};
+  const { subject, class: grade, topic, language } = req.body || {};
   if (!topic) return res.status(400).json({ error: "Topic required" });
 
   const langName = language === "rw" ? "Kinyarwanda" : language === "fr" ? "French" : "English";
-  const prompt = `You are GHAD AI. Generate a ${difficulty} ${type} assessment in ${langName} for ${grade} ${subject} on "${topic}". Total questions: ${count}. Include an answer key.`;
+  const prompt = `You are GHAD AI. Recommend teaching methodologies for ${grade} ${subject} on "${topic}". Explain how to apply them. Write in ${langName}.`;
 
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
