@@ -26,10 +26,10 @@
   <div class="wrap">
     <div class="hero card3d" data-tilt>
       <h1 data-i18n="hero_title">Plan your lesson in minutes</h1>
-      <p data-i18n="hero_sub">AI-powered, for every teacher in our school, all subjects, in the official REB lesson plan format.</p>
+      <p data-i18n="hero_sub">AI-powered: fill in a few details, and the AI writes your full REB competence-based lesson plan. Edit, save and print.</p>
       <div class="steps">
-        <div data-i18n="step1">1 · Fill in the lesson details</div>
-        <div data-i18n="step2">2 · Press Generate — the AI writes the plan</div>
+        <div data-i18n="step1">1 · Fill in a few lesson details</div>
+        <div data-i18n="step2">2 · Press Generate — the AI writes everything</div>
         <div data-i18n="step3">3 · Edit, save and print</div>
       </div>
       <div class="hero-cta">
@@ -58,8 +58,6 @@
     </div>
   </header>
 
-  <button id="menuToggle" class="menu-toggle noprint" aria-label="Menu">☰</button>
-
   <div class="wrap workspace-wrap">
     <nav class="tabs noprint" id="tabs">
       <button class="tab active" data-view="lesson" data-i18n="tool_lesson">Lesson Planner</button>
@@ -70,42 +68,29 @@
       <button class="tab" data-view="settings" data-i18n="tool_settings">Settings</button>
     </nav>
 
-    <!-- LESSON PLANNER -->
+    <!-- ===== LESSON PLANNER (few fields, AI does the rest) ===== -->
     <section id="view-lesson" class="view active">
       <div class="card noprint" id="form">
         <div class="g">
-          <div class="full sec" data-i18n="sec_id">🏫 Identification</div>
-          <div class="full"><label data-i18n="school">School name</label><input id="school"></div>
-          <div class="full"><label data-i18n="teacher">Teacher's name</label><input id="teacher"></div>
-          <div><label data-i18n="term">Term</label><select id="term"><option>1</option><option>2</option><option>3</option></select></div>
-          <div><label data-i18n="date">Date</label><input id="date" type="date"></div>
+          <div class="full sec" data-i18n="sec_basic">✏️ Just a few things — the AI completes the rest</div>
           <div><label data-i18n="subject">Subject</label><select id="subject"><option value="Social Studies">Social Studies</option><option value="Religious Education">Religious Education</option><option value="English">English</option><option value="Kinyarwanda">Kinyarwanda</option><option value="Kiswahili">Kiswahili</option><option value="French">French</option><option value="Mathematics">Mathematics</option><option value="Science and Elementary Technology">Science and Elementary Technology</option><option value="Creative Arts">Creative Arts</option><option value="Physical Education">Physical Education</option><option value="Other">Other</option></select><input id="subjo" placeholder="Type subject" style="display:none;margin-top:6px"></div>
           <div><label data-i18n="class">Class</label><input id="cls" list="cl" placeholder="e.g. P4"><datalist id="cl"><option>P1</option><option>P2</option><option>P3</option><option>P4</option><option>P5</option><option>P6</option><option>S1</option><option>S2</option><option>S3</option><option>S4</option><option>S5</option><option>S6</option></datalist></div>
-          <div><label data-i18n="unitno">Unit No</label><input id="unit"></div>
-          <div><label data-i18n="lessonno">Lesson No (e.g. 2 of 5)</label><input id="lesson"></div>
+          <div class="full"><label data-i18n="ltitle">Title of the lesson (or unit topic)</label><input id="ltitle" placeholder="e.g. Describing my family"></div>
           <div><label data-i18n="duration">Duration (min)</label><input id="dur" type="number" value="40"></div>
           <div><label data-i18n="size">Class size</label><input id="size" type="number"></div>
-          <div class="full hint" data-i18n="min_hint">Minutes for each step (leave empty to let the AI/app divide them).</div>
-          <div><label data-i18n="min1">Introduction (min)</label><input id="min1" type="number" min="1" placeholder="auto"></div>
-          <div><label data-i18n="min2">Development (min)</label><input id="min2" type="number" min="1" placeholder="auto"></div>
-          <div><label data-i18n="min3">Conclusion (min)</label><input id="min3" type="number" min="1" placeholder="auto"></div>
-          <div class="full"><label data-i18n="sen">Special Educational Needs (type and number of learners)</label><input id="sen"></div>
-          <div class="full"><label data-i18n="senacc">SEN: how these learners will be accommodated</label><input id="senacc"></div>
 
-          <div class="full sec" data-i18n="sec_curr">📚 Curriculum and objective</div>
+          <div class="full sec" data-i18n="sec_optional">Optional — leave empty and the AI fills it in</div>
+          <div><label data-i18n="school">School name</label><input id="school"></div>
+          <div><label data-i18n="teacher">Teacher's name</label><input id="teacher"></div>
+          <div><label data-i18n="term">Term</label><select id="term"><option>1</option><option>2</option><option>3</option></select></div>
+          <div><label data-i18n="date">Date</label><input id="date" type="date"></div>
+          <div><label data-i18n="unitno">Unit No</label><input id="unit"></div>
+          <div><label data-i18n="lessonno">Lesson No (e.g. 2 of 5)</label><input id="lesson"></div>
           <div class="full"><label data-i18n="utitle">Unit title</label><input id="utitle"></div>
-          <div class="full"><label data-i18n="ltitle">Title of the lesson</label><input id="ltitle" placeholder="e.g. Describing my family"></div>
-          <div class="full hint" data-i18n="obj_hint">Instructional objective — leave empty and the AI will write it (condition, who, action, content, standard).</div>
-          <div><label data-i18n="o1">1. Condition</label><input id="o1"></div>
-          <div><label data-i18n="o3">3. Action (verb)</label><input id="o3"></div>
-          <div><label data-i18n="o4">4. Content</label><input id="o4"></div>
-          <div><label data-i18n="o5">5. Standard</label><input id="o5"></div>
-
-          <div class="full sec" data-i18n="sec_del">🎯 Delivery</div>
-          <div><label data-i18n="loc">Plan for this class</label><select id="loc"><option value="Inside">Inside</option><option value="Outside">Outside</option></select></div>
+          <div class="full"><label data-i18n="sen">Special Educational Needs (type and number of learners)</label><input id="sen"></div>
           <div class="full"><label data-i18n="mat">Learning materials (comma separated)</label><input id="mat"></div>
-          <div class="full"><label data-i18n="ref">References</label><input id="ref"></div>
-          <div class="full hint" data-i18n="ai_hint">✨ Leave Introduction / Development / Conclusion empty and the AI will write all teacher and learner activities for you. Anything you type yourself is kept.</div>
+          <div class="full"><label data-i18n="extra">Extra instructions for the AI (optional)</label><input id="extra"></div>
+
           <button class="big" id="genBtn" data-i18n="generate">✨ Generate lesson plan</button>
           <button class="o" id="newBtn" data-i18n="new_plan">New blank plan</button>
         </div>
@@ -116,13 +101,13 @@
           <button id="saveBtn" data-i18n="save">💾 Save plan</button>
           <button id="printBtn" data-i18n="print">🖨️ Print / Save PDF</button>
           <button class="o" id="topBtn" data-i18n="top">Top</button>
-          <div class="hint"><span data-i18n="edit_tip">Tip: tap any box in the plan to edit it, including the minutes.</span> <b id="tot"></b></div>
+          <div class="hint"><span data-i18n="edit_tip">Tip: tap any box in the plan to edit it. Dotted spaces are for you to fill in (school, teacher, date…).</span> <b id="tot"></b></div>
         </div>
         <div class="scroll"><table id="plan"></table></div>
       </div>
     </section>
 
-    <!-- ASSISTANT -->
+    <!-- ===== ASSISTANT (with storage) ===== -->
     <section id="view-assistant" class="view">
       <div class="card noprint chat-tools">
         <button class="o sm" id="newChatBtn" data-i18n="new_chat">➕ New chat</button>
@@ -138,7 +123,7 @@
       </div>
     </section>
 
-    <!-- ASSESSMENT -->
+    <!-- ===== ASSESSMENT (connect to your AI) ===== -->
     <section id="view-assessment" class="view">
       <div class="card">
         <div class="g">
@@ -146,8 +131,8 @@
           <div><label data-i18n="class">Class</label><input id="assessClass"></div>
           <div><label data-i18n="topic">Topic</label><input id="assessTopic"></div>
           <div><label data-i18n="questions">Questions</label><input id="assessCount" type="number" value="5" min="1" max="50"></div>
-          <div><label data-i18n="difficulty">Difficulty</label><select id="assessDifficulty"><option value="easy" data-i18n="easy">Easy</option><option value="medium" selected data-i18n="medium">Medium</option><option value="hard" data-i18n="hard">Hard</option></select></div>
-          <div><label data-i18n="atype">Type</label><select id="assessType"><option value="mcq" data-i18n="mcq">Multiple Choice</option><option value="short" data-i18n="short_a">Short Answer</option><option value="mixed" data-i18n="mixed">Mixed</option></select></div>
+          <div><label data-i18n="difficulty">Difficulty</label><select id="assessDifficulty"><option value="easy">Easy</option><option value="medium" selected>Medium</option><option value="hard">Hard</option></select></div>
+          <div><label data-i18n="atype">Type</label><select id="assessType"><option value="mcq">Multiple Choice</option><option value="short">Short Answer</option><option value="mixed">Mixed</option></select></div>
           <button class="big" id="generateAssessment" data-i18n="gen_assess">✨ Generate Assessment</button>
         </div>
         <div id="assessmentOutput" class="output hidden">
@@ -157,7 +142,7 @@
       </div>
     </section>
 
-    <!-- METHODOLOGY -->
+    <!-- ===== METHODOLOGY (connect to your AI) ===== -->
     <section id="view-methodology" class="view">
       <div class="card">
         <div class="g">
@@ -173,7 +158,7 @@
       </div>
     </section>
 
-    <!-- LIBRARY -->
+    <!-- ===== LIBRARY ===== -->
     <section id="view-library" class="view">
       <div class="card">
         <div class="sec" data-i18n="my_plans">My lesson plans</div>
@@ -182,7 +167,7 @@
       </div>
     </section>
 
-    <!-- SETTINGS -->
+    <!-- ===== SETTINGS ===== -->
     <section id="view-settings" class="view">
       <div class="card settings">
         <label data-i18n="lang_label">Language</label>
